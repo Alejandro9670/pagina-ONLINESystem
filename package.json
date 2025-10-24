@@ -1,0 +1,17 @@
+{
+  "name": "online-system-website",
+  "version": "1.0.0",
+  "description": "Website for Online System - IT Consulting Company",
+  "main": "index.html",
+  "scripts": {
+    "dev": "npx serve .",
+    "start": "npx serve .",
+    "build": "echo 'Static site - no build needed'"
+  },
+  "keywords": ["website", "consulting", "IT", "online-system"],
+  "author": "Online System",
+  "license": "MIT",
+  "devDependencies": {
+    "serve": "^14.2.1"
+  }
+}

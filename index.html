@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online System - Consultoría Informática</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Online System - Más de 24 años transformando empresas a través de la tecnología con consultoría especializada, desarrollo de software, automatización y servicios de soporte TI.">
+    <meta name="keywords" content="consultoría informática, desarrollo software, transformación digital, ciberseguridad, cloud computing, big data, inteligencia artificial, soporte técnico, redes, infraestructura TI">
+    <meta name="author" content="Online System">
+    
+    <!-- Open Graph Meta Tags (para redes sociales) -->
+    <meta property="og:title" content="Online System - Consultoría Informática">
+    <meta property="og:description" content="Más de 24 años transformando empresas a través de la tecnología con consultoría especializada, desarrollo de software, automatización y servicios de soporte TI.">
+    <meta property="og:image" content="https://www.onlinesystem.cl/images/LOGO ONLINE SYSTEM NORMAL.png">
+    <meta property="og:url" content="https://www.onlinesystem.cl">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Online System">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Online System - Consultoría Informática">
+    <meta name="twitter:description" content="Más de 24 años transformando empresas a través de la tecnología con consultoría especializada, desarrollo de software, automatización y servicios de soporte TI.">
+    <meta name="twitter:image" content="https://www.onlinesystem.cl/images/LOGO ONLINE SYSTEM NORMAL.png">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/LOGO ONLINE SYSTEM NORMAL.png">
+    <link rel="shortcut icon" type="image/png" href="images/LOGO ONLINE SYSTEM NORMAL.png">
+    <link rel="apple-touch-icon" href="images/LOGO ONLINE SYSTEM NORMAL.png">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.onlinesystem.cl">
+    
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="images/LOGO ONLINE SYSTEM NORMAL.png" alt="Online System" class="logo">
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#nosotros">Nosotros</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#clientes">Clientes</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+        <!-- Image Slider -->
+        <div class="hero-slider">
+            <div class="slide active" style="background-image: url('images/seguridad.jpg');">
+                <div class="slide-overlay"></div>
+            </div>
+            <div class="slide" style="background-image: url('images/ia.jpg');">
+                <div class="slide-overlay"></div>
+            </div>
+            <div class="slide" style="background-image: url('images/data_god.png');">
+                <div class="slide-overlay"></div>
+            </div>
+        </div>
+        
+        <!-- Slider Controls -->
+        <div class="slider-controls">
+            <button class="slider-btn prev-btn" onclick="changeSlide(-1)">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="slider-btn next-btn" onclick="changeSlide(1)">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+        
+        <!-- Slider Indicators -->
+        <div class="slider-indicators">
+            <span class="indicator active" onclick="currentSlide(1)"></span>
+            <span class="indicator" onclick="currentSlide(2)"></span>
+            <span class="indicator" onclick="currentSlide(3)"></span>
+        </div>
+        
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Soluciones tecnológicas <span class="highlight">integrales</span></h1>
+                <p>Más de 24 años transformando empresas a través de la tecnología con consultoría especializada, desarrollo de software, automatización, servicios de soporte y mantenimiento de infraestructura TI</p>
+                <div class="hero-buttons">
+                    <a href="#contacto" class="btn-primary">Contáctanos</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="floating-card">
+                    <a href="#proyectos">
+                        <i class="fas fa-code"></i>
+                        <span>Proyectos<br>Realizados</span>
+                    </a>
+                </div>
+                <div class="floating-card">
+                    <a href="#servicios">
+                        <i class="fas fa-cloud"></i>
+                        <span>Cloud</span>
+                    </a>
+                </div>
+                <div class="floating-card">
+                    <a href="#servicios">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>Seguridad</span>
+                    </a>
+                </div>
+                <div class="floating-card">
+                    <a href="#servicios">
+                        <i class="fas fa-chart-line"></i>
+                        <span>Big Data</span>
+                    </a>
+                </div>
+                <div class="floating-card">
+                    <a href="#nosotros">
+                        <i class="fas fa-handshake"></i>
+                        <span>ERP Softland</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="servicios" class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2>Nuestros Servicios</h2>
+                <div class="services-subtitle">
+                    <span class="subtitle-line"></span>
+                    <h3>Área de Consultoría</h3>
+                </div>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3>Transformación Digital</h3>
+                    <p>Evaluación y diagnóstico tecnológico, planificación estratégica y optimización de procesos empresariales.</p>
+                    <ul>
+                        <li>Evaluación de infraestructura tecnológica</li>
+                        <li>Planificación de transformación digital</li>
+                        <li>Optimización de procesos</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3>Desarrollo de Software</h3>
+                    <p>Desarrollo de software a medida, implementación de plataformas tecnológicas e integración de sistemas.</p>
+                    <ul>
+                        <li>Aplicaciones personalizadas</li>
+                        <li>Integración de sistemas ERP, CRM y WMS, entre otros</li>
+                        <li>Logistica RFID</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-cloud"></i>
+                    </div>
+                    <h3>Cloud Computing</h3>
+                    <p>Migración a la nube, optimización de infraestructuras y seguridad en plataformas cloud.</p>
+                    <ul>
+                        <li>Migración AWS, Google Cloud, Azure</li>
+                        <li>Optimización de recursos</li>
+                        <li>Seguridad en la nube</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Ciberseguridad</h3>
+                    <p>Análisis de riesgos, implementación de políticas de seguridad y auditorías especializadas.</p>
+                    <ul>
+                        <li>Análisis de vulnerabilidades</li>
+                        <li>Políticas de seguridad</li>
+                        <li>Auditorías de cumplimiento</li>
+                        <li>Email protection</li>
+                        <li>Security awareness training</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Big Data y Analytics</h3>
+                    <p>Estrategias de análisis de datos, Business Intelligence y soluciones de Machine Learning.</p>
+                    <ul>
+                        <li>Análisis de grandes volúmenes de datos</li>
+                        <li>Dashboards y reportes BI</li>
+                        <li>Modelos predictivos</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3>Inteligencia Artificial</h3>
+                    <p>Desarrollo de soluciones de IA, automatización de procesos y optimización de experiencia del cliente.</p>
+                    <ul>
+                        <li>Chatbots y asistentes virtuales</li>
+                        <li>Automatización de procesos</li>
+                        <li>Análisis predictivo</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <h3>Infraestructura y Redes</h3>
+                    <p>Diseño de redes, cableado estructurado, datacenters y sistemas de comunicaciones empresariales.</p>
+                    <ul>
+                        <li>Diseño de redes LAN/WAN</li>
+                        <li>Cableado estructurado</li>
+                        <li>Datacenters y salas TI</li>
+                        <li>Certificación de redes</li>
+                        <li>Estudio de instalación (fuerza y señal)</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <h3>Gestión de Proyectos TI</h3>
+                    <p>Dirección de proyectos tecnológicos, metodologías ágiles y evaluación de resultados.</p>
+                    <ul>
+                        <li>Gestión integral de proyectos</li>
+                        <li>Metodologías ITIL (conjunto de buenas prácticas para la gestión de servicios de TI)</li>
+                        <li>Evaluación de impacto</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>Soporte Técnico</h3>
+                    <p>Contratos mensuales de soporte técnico especializado, mantenimiento preventivo y gestión de infraestructuras TI.</p>
+                    <ul>
+                        <li>Soporte 24/7</li>
+                        <li>Soporte a usuarios</li>
+                        <li>Mantenimiento preventivo</li>
+                        <li>Gestión de infraestructuras</li>
+                        <li>Servicio presencial y remoto a demanda</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="nosotros" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>Quiénes Somos</h2>
+                    <p>Desde nuestros inicios nos hemos dedicado a ofrecer soluciones tecnológicas integrales en consultoría, servicios informáticos especializados, integración de sistemas, mantenimiento y soporte técnico, data center, redes de datos y eléctricas de computación.</p>
+                    <div class="stats">
+                        <div class="stat">
+                            <h3>100+</h3>
+                            <p>Proyectos Completados</p>
+                        </div>
+                        <div class="stat">
+                            <h3>20+</h3>
+                            <p>Años de Experiencia</p>
+                        </div>
+                        <div class="stat">
+                            <h3>24/7</h3>
+                            <p>Soporte Técnico</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-features">
+                    <div class="feature">
+                        <i class="fas fa-rocket"></i>
+                        <div>
+                            <h4>Soluciones Personalizadas</h4>
+                            <p>Desarrollamos soluciones efectivas y de alta calidad, adaptadas a las necesidades específicas de cada cliente.</p>
+                        </div>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-users"></i>
+                        <div>
+                            <h4>Equipo Experto</h4>
+                            <p>Profesionales altamente calificados con amplia trayectoria en el sector TI y certificaciones especializadas.</p>
+                        </div>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-award"></i>
+                        <div>
+                            <h4>Respaldo de Calidad</h4>
+                            <p>Todos nuestros servicios están respaldados por proveedores líderes del mercado y representantes autorizados.</p>
+                        </div>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-handshake"></i>
+                        <div>
+                            <h4>Certificación Softland</h4>
+                            <p>Certificación Softland que brinda exclusivos beneficios a ONLINESystem, para generar y apoyar nuevas relaciones de negocios.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mission-vision-cards">
+            <div class="mv-card mission-card">
+                <div class="mv-header">
+                    <div class="mv-icon">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h4>Misión</h4>
+                </div>
+                <p>Nuestro propósito es crear soluciones tecnológicas innovadoras y accesibles que mejoren la vida de las personas, transformen los procesos de las industrias y contribuyan a un futuro más inteligente, eficiente y sostenible.</p>
+            </div>
+            <div class="mv-card vision-card">
+                <div class="mv-header">
+                    <div class="mv-icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h4>Visión</h4>
+                </div>
+                <p>Ser una empresa líder en tecnología a nivel nacional e internacional, reconocida por su capacidad de innovación, compromiso con la transformación digital y aporte significativo al desarrollo de una sociedad más conectada, equitativa y tecnológicamente avanzada.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="proyectos" class="projects">
+        <div class="container">
+            <div class="section-header">
+                <h2>Proyectos realizados por área de consultoría y redes</h2>
+                
+                <!-- Logos de las empresas ONLINESystem e ICSA -->
+                <div style="display: flex; justify-content: center; align-items: center; gap: 3rem; margin: 2rem 0; flex-wrap: wrap;">
+                    <div style="text-align: center;">
+                        <img src="images/LOGO ONLINE SYSTEM NORMAL.png" alt="ONLINESystem" style="height: 100px; width: auto; object-fit: contain; filter: drop-shadow(0 4px 8px rgba(0,0,0,0.1));">
+                    </div>
+                    <div style="text-align: center;">
+                        <img src="images/logoICSA.jpeg" alt="ICSA" style="height: 60px; width: auto; object-fit: contain; filter: drop-shadow(0 4px 8px rgba(0,0,0,0.1));">
+                    </div>
+                </div>
+                
+                <ul style="max-width: 800px; margin: 2rem auto 0; text-align: left; list-style: none; padding: 0;">
+                    <li style="margin-bottom: 1rem; position: relative; padding-left: 2rem; color: #4a5568; line-height: 1.6;">
+                        <i class="fas fa-check-circle" style="position: absolute; left: 0; top: 0.2rem; color: #3182ce;"></i>
+                        Consultoría en arquitectura de redes para sectores público y privado.
+                    </li>
+                    <li style="margin-bottom: 1rem; position: relative; padding-left: 2rem; color: #4a5568; line-height: 1.6;">
+                        <i class="fas fa-check-circle" style="position: absolute; left: 0; top: 0.2rem; color: #3182ce;"></i>
+                        Diseño, implementación e integración de infraestructuras tecnológicas avanzadas.
+                    </li>
+                    <li style="margin-bottom: 1rem; position: relative; padding-left: 2rem; color: #4a5568; line-height: 1.6;">
+                        <i class="fas fa-check-circle" style="position: absolute; left: 0; top: 0.2rem; color: #3182ce;"></i>
+                        Soporte y optimización continua de entornos de misión crítica.
+                    </li>
+                    <li style="margin-bottom: 1rem; position: relative; padding-left: 2rem; color: #4a5568; line-height: 1.6;">
+                        <i class="fas fa-check-circle" style="position: absolute; left: 0; top: 0.2rem; color: #3182ce;"></i>
+                        Soluciones enfocadas en eficiencia, escalabilidad y alto rendimiento.
+                    </li>
+                </ul>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Sistema ERP Empresarial">
+                        <div class="project-overlay">
+                            <div class="project-category">Integración de ERP</div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Sistema ERP Empresarial</h3>
+                        <p>Integración de sistema ERP para empresa manufacturera con más de 120 empleados. Integración de módulos de inventario, ventas, contabilidad y recursos humanos.</p>
+                        <div class="project-results">
+                            <div class="result-item">
+                                <i class="fas fa-chart-line"></i>
+                                <span>40% mejora en eficiencia</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.pexels.com/photos/1181675/pexels-photo-1181675.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Migración a la Nube">
+                        <div class="project-overlay">
+                            <div class="project-category">Base de Datos</div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Corrección y Depuración de Base de Datos</h3>
+                        <p>Ejecución de corrección y depuración de la base de datos con información crítica de la empresa, asegurando su integridad y disponibilidad.</p>
+                        <div class="project-results">
+                            <div class="result-item">
+                                <i class="fas fa-shield-alt"></i>
+                                <span>100% uptime</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.pexels.com/photos/60504/security-protection-anti-virus-software-60504.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Auditoría de Seguridad">
+                        <div class="project-overlay">
+                            <div class="project-category">Ciberseguridad</div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Auditoría de Seguridad Integral</h3>
+                        <p>Evaluación completa de seguridad para holding. Implementación de políticas de seguridad, firewall avanzado y capacitación del personal.</p>
+                        <div class="project-results">
+                            <div class="result-item">
+                                <i class="fas fa-bug"></i>
+                                <span>0 vulnerabilidades críticas</span>
+                            </div>
+                            <div class="result-item">
+                                <i class="fas fa-users"></i>
+                                <span>150 usuarios capacitados</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Red Empresarial">
+                        <div class="project-overlay">
+                            <div class="project-category">Infraestructura</div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Red Empresarial Corporativa</h3>
+                        <p>Diseño e implementación de red LAN/WAN para corporativo con 5 sucursales. Cableado estructurado, switches administrables y sistema de monitoreo 24/7.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Cisco</span>
+                            <span class="tech-tag">Fibra Óptica</span>
+                            <span class="tech-tag">VLAN</span>
+                            <span class="tech-tag">VPN</span>
+                        </div>
+                        <div class="project-results">
+                            <div class="result-item">
+                                <i class="fas fa-network-wired"></i>
+                                <span>5 sucursales conectadas</span>
+                            </div>
+                            <div class="result-item">
+                                <i class="fas fa-tachometer-alt"></i>
+                                <span>1Gbps velocidad</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.pexels.com/photos/669615/pexels-photo-669615.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Business Intelligence">
+                        <div class="project-overlay">
+                            <div class="project-category">Big Data & Analytics</div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Plataforma de Business Intelligence</h3>
+                        <p>Desarrollo de dashboard ejecutivo para cadena retail. Análisis en tiempo real de ventas, inventario y comportamiento del cliente con machine learning.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Power BI</span>
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">SQL Server</span>
+                            <span class="tech-tag">Machine Learning</span>
+                        </div>
+                        <div class="project-results">
+                            <div class="result-item">
+                                <i class="fas fa-chart-bar"></i>
+                                <span>15% aumento en ventas</span>
+                            </div>
+                            <div class="result-item">
+                                <i class="fas fa-eye"></i>
+                                <span>Análisis en tiempo real</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Chatbot IA">
+                        <div class="project-overlay">
+                            <div class="project-category">Inteligencia Artificial</div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Chatbot con IA para Atención al Cliente</h3>
+                        <p>Implementación de chatbot inteligente para empresas. Procesamiento de lenguaje natural y integración con CRM existente.</p>
+                        <div class="project-results">
+                            <div class="result-item">
+                                <i class="fas fa-smile"></i>
+                                <span>100% satisfacción cliente</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Clients Section -->
+    <section id="clientes" class="clients" style="padding: 100px 0; background: linear-gradient(180deg, #ffffff 0%, #f7fafc 100%);">
+        <div class="container">
+            <div class="section-header">
+                <h2>Nuestros Clientes</h2>
+                <p>Empresas que han confiado en nuestras soluciones tecnológicas</p>
+            </div>
+            <div class="clients-carousel-container">
+                <div class="clients-carousel">
+                    <!-- Primera serie de logos -->
+                    <div class="clients-slide">
+                        <img src="images/iron_mountain.png" alt="Iron Mountain">
+                    </div>
+                    <div class="clients-slide">
+                        <img src="images/Tunuel_sancristobal.png" alt="Túnel San Cristóbal">
+                    </div>
+                    <div class="clients-slide">
+                        <img src="images/entel.png" alt="Entel">
+                    </div>
+                    <div class="clients-slide">
+                        <img src="images/cocacola.png" alt="Coca Cola">
+                    </div>
+                    <div class="clients-slide">
+                        <img src="images/tecnologico.png" alt="Tecnológico">
+                    </div>
+                    <div class="clients-slide">
+                        <img src="images/lascondes.png" alt="Las Condes">
+                    </div>
+                    <div class="clients-slide">
+                        <img src="images/RyR.png" alt="R&R">
+                    </div>
+                    <div class="clients-slide">
+                        <img src="images/Denin.png" alt="Denin">
+                    </div>
+                    <div class="clients-slide">
+                        <img src="images/veramonte.png" alt="Veramonte">
+                    </div>
+                    <div class="clients-slide">
+                        <img src="images/Nikon.png" alt="Nikon">
+                    </div>
+                    <div class="clients-slide">
+                        <img src="images/cool.png" alt="Cool">
+                    </div>
+                    <div class="clients-slide">
+                        <img src="images/Dakar.png" alt="Dakar">
+                    </div>
+                    <div class="clients-slide">
+                        <img src="images/Elmercurio.png" alt="El Mercurio">
+                    </div>
+                    <div class="clients-slide">
+                        <img src="images/GM.png" alt="GM">
+                    </div>
+                    <div class="clients-slide">
+                        <img src="images/U.Chile.png" alt="Universidad de Chile">
+                    </div>
+                    <div class="clients-slide">
+                        <img src="images/Aero.png" alt="Aero">
+                    </div>
+                    <div class="clients-slide">
+                        <img src="images/BBVA.png" alt="BBVA">
+                    </div>
+                    <div class="clients-slide">
+                        <img src="images/Capel.png" alt="Capel">
+                    </div>
+                    <div class="clients-slide">
+                        <img src="images/Cintec.png" alt="Cintec">
+                    </div>
+                    <div class="clients-slide">
+                        <img src="images/PDI.png" alt="PDI">
+                    </div>
+                    <div class="clients-slide">
+                        <img src="images/KAYSER.png" alt="Kayser">
+                    </div>
+                    <div class="clients-slide">
+                        <img src="images/Fiscalia.N.png" alt="Fiscalía Nacional">
+                    </div>
+                    <!-- Segunda serie de logos (duplicada para efecto continuo) -->
+                    <div class="clients-slide">
+                        <img src="images/iron_mountain.png" alt="Iron Mountain">
+                    </div>
+                    <div class="clients-slide">
+                        <img src="images/Tunuel_sancristobal.png" alt="Túnel San Cristóbal">
+                    </div>
+                    <div class="clients-slide">
+                        <img src="images/entel.png" alt="Entel">
+                    </div>
+                    <div class="clients-slide">
+                        <img src="images/cocacola.png" alt="Coca Cola">
+                    </div>
+                    <div class="clients-slide">
+                        <img src="images/tecnologico.png" alt="Tecnológico">
+                    </div>
+                    <div class="clients-slide">
+                        <img src="images/lascondes.png" alt="Las Condes">
+                    </div>
+                    <div class="clients-slide">
+                        <img src="images/RyR.png" alt="R&R">
+                    </div>
+                    <div class="clients-slide">
+                        <img src="images/Denin.png" alt="Denin">
+                    </div>
+                    <div class="clients-slide">
+                        <img src="images/veramonte.png" alt="Veramonte">
+                    </div>
+                    <div class="clients-slide">
+                        <img src="images/Nikon.png" alt="Nikon">
+                    </div>
+                    <div class="clients-slide">
+                        <img src="images/cool.png" alt="Cool">
+                    </div>
+                    <div class="clients-slide">
+                        <img src="images/Dakar.png" alt="Dakar">
+                    </div>
+                    <div class="clients-slide">
+                        <img src="images/Elmercurio.png" alt="El Mercurio">
+                    </div>
+                    <div class="clients-slide">
+                        <img src="images/GM.png" alt="GM">
+                    </div>
+                    <div class="clients-slide">
+                        <img src="images/U.Chile.png" alt="Universidad de Chile">
+                    </div>
+                    <div class="clients-slide">
+                        <img src="images/Aero.png" alt="Aero">
+                    </div>
+                    <div class="clients-slide">
+                        <img src="images/BBVA.png" alt="BBVA">
+                    </div>
+                    <div class="clients-slide">
+                        <img src="images/Capel.png" alt="Capel">
+                    </div>
+                    <div class="clients-slide">
+                        <img src="images/Cintec.png" alt="Cintec">
+                    </div>
+                    <div class="clients-slide">
+                        <img src="images/PDI.png" alt="PDI">
+                    </div>
+                    <div class="clients-slide">
+                        <img src="images/KAYSER.png" alt="Kayser">
+                    </div>
+                    <div class="clients-slide">
+                        <img src="images/Fiscalia.N.png" alt="Fiscalía Nacional">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contacto" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Contáctanos</h2>
+                <p>Estamos aquí para ayudarte con tus proyectos tecnológicos</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Ubicación</h4>
+                            <p>Juan Enrique Concha 035, Ñuñoa<br>Santiago - Chile</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Teléfono</h4>
+                            <p><a href="tel:+56229394040">+56 2 2939 4040</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p><a href="mailto:contacto@onlinesystem.cl">contacto@onlinesystem.cl</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h4>Horario</h4>
+                            <p>Lun - Vie: 9:00 - 18:00<br>Sáb: 9:00 - 13:00</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contact-form">
+                        <div class="form-group">
+                            <input type="text" name="name" placeholder="Nombre completo" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" placeholder="Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" name="phone" placeholder="Teléfono">
+                        </div>
+                        <div class="form-group">
+                            <select name="service" required>
+                                <option value="">Selecciona un servicio</option>
+                                <option value="consultoria">Consultoría TI</option>
+                                <option value="desarrollo">Desarrollo de Software</option>
+                                <option value="cloud">Cloud Computing</option>
+                                <option value="seguridad">Ciberseguridad</option>
+                                <option value="bigdata">Big Data & Analytics</option>
+                                <option value="ia">Inteligencia Artificial</option>
+                                <option value="infraestructura">Infraestructura y Redes</option>
+                                <option value="proyectos">Gestión de Proyectos TI</option>
+                                <option value="soporte">Soporte Técnico</option>
+                                <option value="otro">Otro</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <textarea name="message" rows="5" placeholder="Describe tu proyecto o consulta" required></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary">Enviar Mensaje</button>
+                    </form>
+                    <div id="form-message" style="display: none; margin-top: 1rem; padding: 1rem; border-radius: 8px;"></div>
+                </div>
+            </div>
+            <div class="whatsapp-cta">
+                <a href="https://wa.me/56929394040?text=Hola,%20me%20interesa%20conocer%20más%20sobre%20sus%20servicios%20de%20consultoría%20TI" class="whatsapp-btn" target="_blank">
+                    <i class="fab fa-whatsapp"></i>
+                    <span>Contáctanos por WhatsApp</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="images/LOGO ONLINE SYSTEM NORMAL.png" alt="Online System" style="height: 60px; width: auto; margin-bottom: 1rem;">
+                    </div>
+                    <p>Más de 24 años transformando empresas a través de la tecnología con soluciones integrales de consultoría informática.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Servicios</h4>
+                    <ul>
+                        <li><a href="#servicios">Transformación Digital</a></li>
+                        <li><a href="#servicios">Desarrollo de Software</a></li>
+                        <li><a href="#servicios">Cloud Computing</a></li>
+                        <li><a href="#servicios">Ciberseguridad</a></li>
+                        <li><a href="#servicios">Big Data & Analytics</a></li>
+                        <li><a href="#servicios">Inteligencia Artificial</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Empresa</h4>
+                    <ul>
+                        <li><a href="#nosotros">Quiénes Somos</a></li>
+                        <li><a href="#proyectos">Proyectos</a></li>
+                        <li><a href="#clientes">Clientes</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contacto</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> Juan Enrique Concha 035, Ñuñoa<br>Santiago - Chile</p>
+                    <p><i class="fas fa-phone"></i> <a href="tel:+56229394040">+56 2 2939 4040</a></p>
+                    <p><i class="fas fa-envelope"></i> <a href="mailto:contacto@onlinesystem.cl">contacto@onlinesystem.cl</a></p>
+                    <p><i class="fas fa-clock"></i> Lun - Vie: 9:00 - 18:00</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Online System. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
