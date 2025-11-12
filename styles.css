@@ -559,6 +559,73 @@ a[href^="mailto:"]:hover {
     font-weight: bold;
 }
 
+/* Competitive Advantages Section */
+.competitive-advantages {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #1a365d 0%, #2c5282 100%);
+    color: #ffffff;
+}
+
+.competitive-advantages .section-header h2 {
+    color: #ffffff;
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+.advantages-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.advantage-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.advantage-card:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.advantage-icon {
+    width: 70px;
+    height: 70px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+}
+
+.advantage-icon i {
+    font-size: 2rem;
+    color: #ffffff;
+}
+
+.advantage-card h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 0.8rem;
+    color: #ffffff;
+}
+
+.advantage-card p {
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
 /* About Section */
 .about {
     padding: 100px 0;
@@ -1280,7 +1347,21 @@ a[href^="mailto:"]:hover {
     .services-subtitle h3 {
         font-size: 1.1rem;
     }
-    
+
+    .advantages-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 0 1rem;
+    }
+
+    .advantage-card {
+        padding: 1.5rem;
+    }
+
+    .competitive-advantages .section-header h2 {
+        font-size: 2rem;
+    }
+
     .about-content {
         grid-template-columns: 1fr;
         gap: 2rem;
