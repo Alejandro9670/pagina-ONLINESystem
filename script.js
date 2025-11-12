@@ -228,3 +228,32 @@ function currentSlide(index) {
     currentSlideIndex = index - 1;
     showSlide(currentSlideIndex);
 }
+
+// Video autoplay on scroll
+const videoSection = document.querySelector('#video-corporativo');
+const videoIframe = document.querySelector('#video-corporativo iframe');
+
+if (videoSection && videoIframe) {
+    const videoObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                // Get current iframe src
+                const currentSrc = videoIframe.getAttribute('src');
+                // Add autoplay parameter if not already present
+                if (!currentSrc.includes('autoplay=1')) {
+                    videoIframe.setAttribute('src', currentSrc + '&autoplay=1');
+                }
+            } else {
+                // Stop video when out of view
+                const currentSrc = videoIframe.getAttribute('src');
+                if (currentSrc.includes('&autoplay=1')) {
+                    videoIframe.setAttribute('src', currentSrc.replace('&autoplay=1', ''));
+                }
+            }
+        });
+    }, {
+        threshold: 0.5 // Video will autoplay when 50% visible
+    });
+
+    videoObserver.observe(videoSection);
+}
