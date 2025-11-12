@@ -274,15 +274,15 @@ body {
 }
 
 .btn-secondary {
-    background: transparent;
-    color: #3182ce;
-    border: 2px solid #3182ce;
+    background: linear-gradient(135deg, #3182ce 0%, #2b77cb 100%);
+    color: #ffffff;
+    box-shadow: 0 4px 15px rgba(49, 130, 206, 0.3);
 }
 
 .btn-secondary:hover {
-    background: #3182ce;
-    color: #ffffff;
-    box-shadow: 0 4px 15px rgba(49, 130, 206, 0.2);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(49, 130, 206, 0.4);
+    background: linear-gradient(135deg, #2b77cb 0%, #2c5aa0 100%);
 }
 
 /* Hero Visual */
@@ -1202,7 +1202,8 @@ a[href^="mailto:"]:hover {
     }
     
     .hero-buttons {
-        flex-direction: column;
+        flex-direction: row;
+        justify-content: center;
         align-items: center;
         gap: 1rem;
     }
