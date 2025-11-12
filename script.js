@@ -229,31 +229,33 @@ function currentSlide(index) {
     showSlide(currentSlideIndex);
 }
 
-// Video autoplay on scroll
+// Video section scroll detection (optional autoplay)
 const videoSection = document.querySelector('#video-corporativo');
-const videoIframe = document.querySelector('#video-corporativo iframe');
+const videoIframe = document.querySelector('#corporate-video');
 
 if (videoSection && videoIframe) {
+    // Create IntersectionObserver to detect when video is visible
     const videoObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                // Get current iframe src
-                const currentSrc = videoIframe.getAttribute('src');
-                // Add autoplay parameter if not already present
-                if (!currentSrc.includes('autoplay=1')) {
-                    videoIframe.setAttribute('src', currentSrc + '&autoplay=1');
-                }
-            } else {
-                // Stop video when out of view
-                const currentSrc = videoIframe.getAttribute('src');
-                if (currentSrc.includes('&autoplay=1')) {
-                    videoIframe.setAttribute('src', currentSrc.replace('&autoplay=1', ''));
-                }
+                // Video is visible - could trigger analytics or other actions
+                console.log('Video section is now visible');
             }
         });
     }, {
-        threshold: 0.5 // Video will autoplay when 50% visible
+        threshold: 0.3 // Trigger when 30% of video section is visible
     });
 
     videoObserver.observe(videoSection);
+}
+
+// Add loading state for video iframe
+if (videoIframe) {
+    videoIframe.addEventListener('load', () => {
+        console.log('Video iframe loaded successfully');
+    });
+
+    videoIframe.addEventListener('error', () => {
+        console.error('Error loading video iframe');
+    });
 }
