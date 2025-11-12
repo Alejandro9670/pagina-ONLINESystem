@@ -811,6 +811,7 @@ a[href^="mailto:"]:hover {
     box-shadow: 0 8px 32px rgba(52, 73, 94, 0.1);
     transition: all 0.3s ease;
     border: 1px solid rgba(203, 213, 224, 0.3);
+    scroll-margin-top: 80px;
 }
 
 .project-card:hover {
