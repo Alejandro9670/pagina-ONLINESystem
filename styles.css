@@ -559,6 +559,10 @@ a[href^="mailto:"]:hover {
     font-weight: bold;
 }
 
+.service-card {
+    scroll-margin-top: 80px;
+}
+
 /* Competitive Advantages Section */
 .competitive-advantages {
     padding: 80px 0;
