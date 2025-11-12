@@ -252,7 +252,7 @@ body {
     flex-wrap: wrap;
 }
 
-.btn-primary, .btn-secondary {
+.btn-primary, .btn-secondary, .btn-tertiary {
     padding: 12px 24px;
     border-radius: 8px;
     text-decoration: none;
@@ -283,6 +283,26 @@ body {
     transform: translateY(-2px);
     box-shadow: 0 8px 25px rgba(49, 130, 206, 0.4);
     background: linear-gradient(135deg, #2b77cb 0%, #2c5aa0 100%);
+}
+
+.btn-tertiary {
+    background: linear-gradient(135deg, #16a34a 0%, #15803d 100%);
+    color: #ffffff;
+    box-shadow: 0 4px 15px rgba(22, 163, 74, 0.3);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.95rem;
+}
+
+.btn-tertiary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(22, 163, 74, 0.4);
+    background: linear-gradient(135deg, #15803d 0%, #166534 100%);
+}
+
+.btn-tertiary i {
+    font-size: 1.1rem;
 }
 
 /* Hero Visual */
