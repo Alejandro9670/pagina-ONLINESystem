@@ -292,7 +292,8 @@ body {
     display: flex;
     align-items: center;
     gap: 8px;
-    font-size: 0.95rem;
+    font-size: 0.75rem;
+    padding: 8px 16px;
 }
 
 .btn-tertiary:hover {
@@ -302,7 +303,7 @@ body {
 }
 
 .btn-tertiary i {
-    font-size: 1.1rem;
+    font-size: 0.9rem;
 }
 
 /* Hero Visual */
