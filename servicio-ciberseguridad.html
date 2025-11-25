@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ciberseguridad - Online System</title>
+    <meta name="description" content="Servicios especializados de ciberseguridad para proteger los activos digitales de tu organización.">
+    <link rel="icon" type="image/png" href="images/LOGO ONLINE SYSTEM NORMAL.png">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .service-detail-hero {
+            min-height: 60vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            background: linear-gradient(135deg, #1a365d 0%, #2c5282 100%);
+            padding: 120px 0 60px;
+        }
+
+        .service-detail-content {
+            padding: 80px 0;
+            background: #ffffff;
+        }
+
+        .service-detail-hero h1 {
+            font-size: 3rem;
+            color: #ffffff;
+            margin-bottom: 1.5rem;
+        }
+
+        .service-detail-hero p {
+            font-size: 1.3rem;
+            color: rgba(255, 255, 255, 0.9);
+            max-width: 800px;
+        }
+
+        .service-icon-large {
+            width: 100px;
+            height: 100px;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 2rem;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .service-icon-large i {
+            font-size: 3rem;
+            color: #ffffff;
+        }
+
+        .detail-section {
+            margin-bottom: 3rem;
+        }
+
+        .detail-section h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: #1a365d;
+        }
+
+        .detail-section h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #2c3e50;
+            margin-top: 2rem;
+        }
+
+        .detail-section p {
+            color: #4a5568;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .detail-section ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .detail-section ul li {
+            color: #4a5568;
+            margin-bottom: 1rem;
+            padding-left: 2rem;
+            position: relative;
+            line-height: 1.6;
+        }
+
+        .detail-section ul li::before {
+            content: '\f00c';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            color: #3182ce;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, #e6f3ff 0%, #f0f7ff 100%);
+            border-left: 4px solid #3182ce;
+            padding: 2rem;
+            border-radius: 12px;
+            margin: 2rem 0;
+        }
+
+        .highlight-box h4 {
+            color: #1a365d;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .highlight-box p {
+            margin-bottom: 0.5rem;
+        }
+
+        .back-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 12px 24px;
+            background: rgba(255, 255, 255, 0.2);
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(10px);
+            margin-top: 2rem;
+        }
+
+        .back-button:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateX(-5px);
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, #3182ce 0%, #2b77cb 100%);
+            padding: 60px 0;
+            text-align: center;
+            margin-top: 4rem;
+        }
+
+        .cta-section h2 {
+            color: #ffffff;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .cta-section p {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 15px 40px;
+            background: #ffffff;
+            color: #3182ce;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">
+                    <img src="images/LOGO ONLINE SYSTEM NORMAL.png" alt="Online System" class="logo">
+                </a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html#inicio">Inicio</a></li>
+                <li><a href="index.html#nosotros">Nosotros</a></li>
+                <li><a href="index.html#servicios">Servicios</a></li>
+                <li><a href="index.html#proyectos">Proyectos</a></li>
+                <li><a href="index.html#clientes">Clientes</a></li>
+                <li><a href="index.html#contacto">Contacto</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="service-detail-hero">
+        <div class="container">
+            <div class="service-icon-large">
+                <i class="fas fa-shield-alt"></i>
+            </div>
+            <h1>Ciberseguridad</h1>
+            <p>Protegemos los activos digitales de tu organización mediante análisis de riesgos, políticas de seguridad y auditorías especializadas. Nuestro enfoque integral reduce vulnerabilidades y garantiza la continuidad del negocio frente a ciberamenazas.</p>
+            <a href="index.html#servicios" class="back-button">
+                <i class="fas fa-arrow-left"></i>
+                <span>Volver a Servicios</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- Content Section -->
+    <section class="service-detail-content">
+        <div class="container">
+            <div class="detail-section">
+                <h2>Protección Integral de tus Activos Digitales</h2>
+                <p>En un mundo cada vez más conectado, la ciberseguridad no es opcional, es fundamental. En ONLINE System ofrecemos soluciones completas para proteger tu infraestructura tecnológica, datos sensibles y operaciones críticas contra amenazas digitales avanzadas.</p>
+                <p>Nuestro enfoque combina tecnología de punta, mejores prácticas internacionales y un equipo de expertos certificados que trabajan para mantener tu organización segura 24/7.</p>
+            </div>
+
+            <div class="highlight-box">
+                <h4>¿Por qué es crítico invertir en Ciberseguridad?</h4>
+                <p><strong>Las amenazas cibernéticas están en constante evolución.</strong> Desde ransomware hasta phishing sofisticado, los atacantes buscan vulnerabilidades en sistemas desprotegidos. Una brecha de seguridad puede significar pérdida de datos, multas regulatorias, daño reputacional y paralización de operaciones.</p>
+            </div>
+
+            <div class="detail-section">
+                <h2>Nuestros Servicios de Ciberseguridad</h2>
+
+                <h3>Análisis de Vulnerabilidades y Riesgos</h3>
+                <p>Identificamos puntos débiles en tu infraestructura antes de que sean explotados por atacantes. Realizamos:</p>
+                <ul>
+                    <li>Escaneo de vulnerabilidades en sistemas, aplicaciones y redes</li>
+                    <li>Pruebas de penetración (pentesting) éticas</li>
+                    <li>Evaluación de configuraciones de seguridad</li>
+                    <li>Análisis de superficies de ataque externas e internas</li>
+                    <li>Informes detallados con clasificación de riesgos y recomendaciones</li>
+                </ul>
+
+                <h3>Diseño e Implementación de Políticas de Seguridad</h3>
+                <p>Desarrollamos políticas y procedimientos de seguridad alineados con las mejores prácticas y normativas internacionales:</p>
+                <ul>
+                    <li>Políticas de acceso y control de usuarios</li>
+                    <li>Gestión de contraseñas y autenticación multifactor</li>
+                    <li>Políticas de uso aceptable y clasificación de datos</li>
+                    <li>Procedimientos de respuesta ante incidentes</li>
+                    <li>Planes de continuidad y recuperación ante desastres</li>
+                </ul>
+
+                <h3>Auditorías de Cumplimiento Normativo</h3>
+                <p>Verificamos que tu organización cumpla con regulaciones y estándares de seguridad:</p>
+                <ul>
+                    <li>ISO 27001 - Sistema de Gestión de Seguridad de la Información</li>
+                    <li>Ley 21.180 de Protección de Datos y Ciberseguridad (Chile)</li>
+                    <li>NIST Cybersecurity Framework</li>
+                    <li>PCI-DSS para industrias de pagos</li>
+                    <li>GDPR y otras regulaciones internacionales</li>
+                </ul>
+
+                <h3>Protección de Correo Electrónico (Email Protection)</h3>
+                <p>El correo electrónico es el vector de ataque más común. Implementamos soluciones avanzadas:</p>
+                <ul>
+                    <li>Filtros anti-spam y anti-phishing de última generación</li>
+                    <li>Detección de malware y enlaces maliciosos</li>
+                    <li>Prevención de pérdida de datos (DLP)</li>
+                    <li>Cifrado de correos sensibles</li>
+                    <li>Sandboxing para archivos adjuntos sospechosos</li>
+                </ul>
+
+                <h3>Capacitación en Seguridad (Security Awareness Training)</h3>
+                <p>El eslabón más débil en la cadena de seguridad suele ser el humano. Ofrecemos:</p>
+                <ul>
+                    <li>Talleres interactivos sobre ciberamenazas actuales</li>
+                    <li>Simulaciones de phishing para evaluar vulnerabilidad humana</li>
+                    <li>Capacitación en buenas prácticas de seguridad digital</li>
+                    <li>Programas de concientización continua</li>
+                    <li>Certificación de usuarios en seguridad básica</li>
+                </ul>
+            </div>
+
+            <div class="highlight-box">
+                <h4>Enfoque Integral y Continuo</h4>
+                <p>La ciberseguridad no es un proyecto con fecha de término, es un proceso continuo. En ONLINE System no solo implementamos soluciones técnicas, sino que trabajamos contigo para crear una cultura de seguridad en toda tu organización.</p>
+                <p><strong>Nuestro compromiso es mantener tu empresa protegida frente a las amenazas actuales y futuras.</strong></p>
+            </div>
+
+            <div class="detail-section">
+                <h2>Beneficios de Nuestro Servicio</h2>
+                <ul>
+                    <li>Reducción significativa de vulnerabilidades y riesgos cibernéticos</li>
+                    <li>Cumplimiento garantizado de normativas y regulaciones</li>
+                    <li>Protección proactiva contra amenazas emergentes</li>
+                    <li>Minimización del impacto de incidentes de seguridad</li>
+                    <li>Mejora de la confianza de clientes y partners</li>
+                    <li>Ahorro en costos por brechas de seguridad evitadas</li>
+                    <li>Monitoreo y respuesta 24/7 ante amenazas</li>
+                </ul>
+            </div>
+
+            <div class="detail-section">
+                <h2>¿Por Qué Elegir ONLINE System?</h2>
+                <p>Con más de 24 años de experiencia en el sector TI, nuestro equipo de especialistas certificados en ciberseguridad ha trabajado con organizaciones de diversos tamaños y sectores, desde PYMEs hasta grandes corporaciones y entidades gubernamentales.</p>
+                <p>Combinamos conocimiento técnico profundo, metodologías probadas y tecnologías de vanguardia para ofrecer soluciones de ciberseguridad que realmente protegen y generan valor.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>¿Listo para Proteger tu Organización?</h2>
+            <p>Contáctanos hoy para una evaluación gratuita de seguridad</p>
+            <a href="index.html#contacto" class="cta-button">Solicitar Consultoría</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="images/LOGO ONLINE SYSTEM NORMAL.png" alt="Online System" style="height: 60px; width: auto; margin-bottom: 1rem;">
+                    </div>
+                    <p>Más de 24 años transformando empresas a través de la tecnología con soluciones integrales de consultoría informática.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Servicios</h4>
+                    <ul>
+                        <li><a href="index.html#servicios">Transformación Digital</a></li>
+                        <li><a href="index.html#servicios">Desarrollo de Software</a></li>
+                        <li><a href="index.html#servicios">Cloud Computing</a></li>
+                        <li><a href="index.html#servicios">Ciberseguridad</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contacto</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> Juan Enrique Concha 035, Ñuñoa<br>Santiago - Chile</p>
+                    <p><i class="fas fa-phone"></i> <a href="tel:+56996070383">+56 9 9607 0383</a></p>
+                    <p><i class="fas fa-envelope"></i> <a href="mailto:contacto@onlinesystem.cl">contacto@onlinesystem.cl</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Online System. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
