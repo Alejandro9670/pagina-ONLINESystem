@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evaluamos tu Empresa - Online System</title>
+    <meta name="description" content="Diagnóstico integral de infraestructura TI para optimizar, proteger y aumentar la eficiencia de tu negocio.">
+    <link rel="icon" type="image/png" href="images/LOGO ONLINE SYSTEM NORMAL.png">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .service-detail-hero {
+            min-height: 60vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            background: linear-gradient(135deg, #1a365d 0%, #2c5282 100%);
+            padding: 120px 0 60px;
+        }
+
+        .service-detail-content {
+            padding: 80px 0;
+            background: #ffffff;
+        }
+
+        .service-detail-hero h1 {
+            font-size: 3rem;
+            color: #ffffff;
+            margin-bottom: 1.5rem;
+        }
+
+        .service-detail-hero p {
+            font-size: 1.3rem;
+            color: rgba(255, 255, 255, 0.9);
+            max-width: 800px;
+        }
+
+        .service-icon-large {
+            width: 100px;
+            height: 100px;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 2rem;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .service-icon-large i {
+            font-size: 3rem;
+            color: #ffffff;
+        }
+
+        .detail-section {
+            margin-bottom: 3rem;
+        }
+
+        .detail-section h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: #1a365d;
+        }
+
+        .detail-section h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #2c3e50;
+            margin-top: 2rem;
+        }
+
+        .detail-section p {
+            color: #4a5568;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .detail-section ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .detail-section ul li {
+            color: #4a5568;
+            margin-bottom: 1rem;
+            padding-left: 2rem;
+            position: relative;
+            line-height: 1.6;
+        }
+
+        .detail-section ul li::before {
+            content: '\f00c';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            color: #3182ce;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, #e6f3ff 0%, #f0f7ff 100%);
+            border-left: 4px solid #3182ce;
+            padding: 2rem;
+            border-radius: 12px;
+            margin: 2rem 0;
+        }
+
+        .highlight-box h4 {
+            color: #1a365d;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .highlight-box p {
+            margin-bottom: 0.5rem;
+        }
+
+        .icon-box {
+            background: linear-gradient(135deg, #f7fafc 0%, #ffffff 100%);
+            border: 2px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+
+        .icon-box h3 {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            color: #1a365d;
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            margin-top: 0;
+        }
+
+        .icon-box h3 i {
+            font-size: 2rem;
+            color: #3182ce;
+        }
+
+        .icon-box ul {
+            list-style: none;
+            padding-left: 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+
+        .icon-box ul li {
+            color: #4a5568;
+            padding-left: 1.5rem;
+            position: relative;
+            line-height: 1.6;
+        }
+
+        .icon-box ul li::before {
+            content: '\f054';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            color: #3182ce;
+            font-size: 0.8rem;
+        }
+
+        .back-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 12px 24px;
+            background: rgba(255, 255, 255, 0.2);
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(10px);
+            margin-top: 2rem;
+        }
+
+        .back-button:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateX(-5px);
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, #3182ce 0%, #2b77cb 100%);
+            padding: 60px 0;
+            text-align: center;
+            margin-top: 4rem;
+        }
+
+        .cta-section h2 {
+            color: #ffffff;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .cta-section p {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 15px 40px;
+            background: #ffffff;
+            color: #3182ce;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        .value-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .value-card {
+            background: #ffffff;
+            border: 2px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 2rem;
+            transition: all 0.3s ease;
+        }
+
+        .value-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(49, 130, 206, 0.15);
+            border-color: #3182ce;
+        }
+
+        .value-card i {
+            font-size: 2.5rem;
+            color: #3182ce;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .value-card h4 {
+            color: #1a365d;
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .value-card p {
+            color: #4a5568;
+            font-size: 1rem;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">
+                    <img src="images/LOGO ONLINE SYSTEM NORMAL.png" alt="Online System" class="logo">
+                </a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html#inicio">Inicio</a></li>
+                <li><a href="index.html#nosotros">Nosotros</a></li>
+                <li><a href="index.html#servicios">Servicios</a></li>
+                <li><a href="index.html#proyectos">Proyectos</a></li>
+                <li><a href="index.html#clientes">Clientes</a></li>
+                <li><a href="index.html#contacto">Contacto</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="service-detail-hero">
+        <div class="container">
+            <div class="service-icon-large">
+                <i class="fas fa-search-dollar"></i>
+            </div>
+            <h1>Diagnóstico Integral de Infraestructura TI</h1>
+            <p>Optimiza, Protege y Aumenta la Eficiencia de Tu Negocio</p>
+            <a href="index.html#servicios" class="back-button">
+                <i class="fas fa-arrow-left"></i>
+                <span>Volver a Servicios</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- Content Section -->
+    <section class="service-detail-content">
+        <div class="container">
+            <div class="detail-section">
+                <h2>Evaluamos Tu Empresa</h2>
+                <p>Realizamos un análisis exhaustivo de tu infraestructura tecnológica, evaluando cada componente crítico para identificar oportunidades de optimización, brechas de seguridad y riesgos operacionales que podrían afectar la continuidad de tu negocio.</p>
+                <p>Nuestro objetivo es entregarte una visión clara y precisa del estado actual de tu entorno TI, permitiéndote tomar decisiones informadas que impulsen la eficiencia, reduzcan costos y fortalezcan la seguridad de tu organización.</p>
+            </div>
+
+            <div class="highlight-box">
+                <h4>¿Por qué es fundamental evaluar tu infraestructura TI?</h4>
+                <p>Muchas empresas operan con tecnología que ha evolucionado sin una planificación estratégica, lo que genera ineficiencias, vulnerabilidades y costos ocultos. Un diagnóstico profesional te permite identificar estos problemas antes de que se conviertan en crisis operativas o brechas de seguridad.</p>
+            </div>
+
+            <div class="icon-box">
+                <h3>
+                    <i class="fas fa-search"></i>
+                    Evaluación Completa de la Infraestructura TI
+                </h3>
+                <p style="margin-bottom: 1.5rem;">Analizamos todos los componentes críticos de tu entorno tecnológico:</p>
+                <ul>
+                    <li>Servidores físicos y virtuales</li>
+                    <li>Redes, firewalls, switches y puntos de acceso</li>
+                    <li>Sistemas operativos y aplicaciones críticas</li>
+                    <li>Políticas de respaldo y recuperación</li>
+                    <li>Seguridad perimetral e interna</li>
+                    <li>Disponibilidad, rendimiento y capacidad (performance & capacity planning)</li>
+                </ul>
+            </div>
+
+            <div class="icon-box">
+                <h3>
+                    <i class="fas fa-chart-bar"></i>
+                    Informe Técnico Detallado
+                </h3>
+                <p style="margin-bottom: 1.5rem;">Entregamos un documento profesional que incluye:</p>
+                <ul>
+                    <li>Estado actual de tu infraestructura</li>
+                    <li>Hallazgos prioritarios (clasificados por criticidad)</li>
+                    <li>Riesgos asociados y su impacto potencial</li>
+                    <li>Métricas y evidencia técnica que respaldan cada conclusión</li>
+                </ul>
+            </div>
+
+            <div class="icon-box">
+                <h3>
+                    <i class="fas fa-tools"></i>
+                    Plan de Acción Estratégico
+                </h3>
+                <p style="margin-bottom: 1.5rem;">Diseñamos recomendaciones claras, priorizadas y aplicables para:</p>
+                <ul>
+                    <li>Mejorar el rendimiento y la eficiencia operativa</li>
+                    <li>Reducir riesgos de fallas, brechas de seguridad y pérdidas de información</li>
+                    <li>Optimizar costos y recursos existentes</li>
+                    <li>Alinear la infraestructura TI a los objetivos del negocio</li>
+                </ul>
+            </div>
+
+            <div class="detail-section">
+                <h2>
+                    <i class="fas fa-briefcase" style="color: #3182ce; margin-right: 0.5rem;"></i>
+                    Valor para tu Empresa
+                </h2>
+                <p>Con este diagnóstico, tu organización podrá:</p>
+
+                <div class="value-grid">
+                    <div class="value-card">
+                        <i class="fas fa-lightbulb"></i>
+                        <h4>Tomar decisiones informadas</h4>
+                        <p>Base tu estrategia TI en datos reales y análisis profesional</p>
+                    </div>
+                    <div class="value-card">
+                        <i class="fas fa-clock"></i>
+                        <h4>Disminuir incidentes y tiempos de inactividad</h4>
+                        <p>Identifica y corrige problemas antes de que afecten tu operación</p>
+                    </div>
+                    <div class="value-card">
+                        <i class="fas fa-shield-alt"></i>
+                        <h4>Aumentar la seguridad y continuidad operativa</h4>
+                        <p>Fortalece tus defensas y garantiza disponibilidad 24/7</p>
+                    </div>
+                    <div class="value-card">
+                        <i class="fas fa-chart-line"></i>
+                        <h4>Planificar inversiones TI de forma inteligente</h4>
+                        <p>Prioriza recursos donde realmente generan valor</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="highlight-box">
+                <h4>Transformamos Diagnósticos en Acciones Concretas</h4>
+                <p>En ONLINE System no solo identificamos problemas, trabajamos contigo para implementar soluciones prácticas que impulsen la eficiencia, la productividad y la continuidad operativa de tu negocio.</p>
+                <p><strong>Con más de 24 años de experiencia, hemos ayudado a cientos de empresas a optimizar su infraestructura TI y convertirla en una ventaja competitiva.</strong></p>
+            </div>
+
+            <div class="detail-section">
+                <h2>¿Cómo Funciona Nuestro Proceso?</h2>
+                <ol style="padding-left: 2rem; color: #4a5568; line-height: 1.8;">
+                    <li style="margin-bottom: 1rem;"><strong>Contacto inicial:</strong> Agendamos una reunión para entender tus necesidades y objetivos</li>
+                    <li style="margin-bottom: 1rem;"><strong>Levantamiento de información:</strong> Accedemos a tu infraestructura para realizar el análisis técnico</li>
+                    <li style="margin-bottom: 1rem;"><strong>Análisis y diagnóstico:</strong> Evaluamos cada componente con metodologías probadas</li>
+                    <li style="margin-bottom: 1rem;"><strong>Presentación de resultados:</strong> Entregamos informe detallado con hallazgos y recomendaciones</li>
+                    <li style="margin-bottom: 1rem;"><strong>Plan de implementación:</strong> Te acompañamos en la ejecución de las mejoras propuestas</li>
+                </ol>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>¿Listo para Optimizar tu Infraestructura TI?</h2>
+            <p>Solicita tu evaluación y descubre cómo podemos ayudarte</p>
+            <a href="index.html#contacto" class="cta-button">Solicitar Evaluación</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="images/LOGO ONLINE SYSTEM NORMAL.png" alt="Online System" style="height: 60px; width: auto; margin-bottom: 1rem;">
+                    </div>
+                    <p>Más de 24 años transformando empresas a través de la tecnología con soluciones integrales de consultoría informática.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Servicios</h4>
+                    <ul>
+                        <li><a href="index.html#servicios">Transformación Digital</a></li>
+                        <li><a href="index.html#servicios">Desarrollo de Software</a></li>
+                        <li><a href="index.html#servicios">Cloud Computing</a></li>
+                        <li><a href="index.html#servicios">Ciberseguridad</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contacto</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> Juan Enrique Concha 035, Ñuñoa<br>Santiago - Chile</p>
+                    <p><i class="fas fa-phone"></i> <a href="tel:+56996070383">+56 9 9607 0383</a></p>
+                    <p><i class="fas fa-envelope"></i> <a href="mailto:contacto@onlinesystem.cl">contacto@onlinesystem.cl</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Online System. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
