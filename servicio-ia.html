@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inteligencia Artificial - Online System</title>
+    <meta name="description" content="Soluciones de IA para automatización de procesos, chatbots inteligentes y análisis predictivo. Optimizamos operaciones con Machine Learning y procesamiento de lenguaje natural.">
+    <link rel="icon" type="image/png" href="images/LOGO ONLINE SYSTEM NORMAL.png">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .service-detail-hero {
+            min-height: 60vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            background: linear-gradient(135deg, #1a365d 0%, #2c5282 100%);
+            padding: 120px 0 60px;
+        }
+
+        .service-detail-content {
+            padding: 80px 0;
+            background: #ffffff;
+        }
+
+        .service-detail-hero h1 {
+            font-size: 3rem;
+            color: #ffffff;
+            margin-bottom: 1.5rem;
+        }
+
+        .service-detail-hero p {
+            font-size: 1.3rem;
+            color: rgba(255, 255, 255, 0.9);
+            max-width: 800px;
+        }
+
+        .service-icon-large {
+            width: 100px;
+            height: 100px;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 2rem;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .service-icon-large i {
+            font-size: 3rem;
+            color: #ffffff;
+        }
+
+        .content-section {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .content-section h2 {
+            font-size: 2.2rem;
+            color: #1a365d;
+            margin-bottom: 1.5rem;
+            margin-top: 3rem;
+        }
+
+        .content-section h3 {
+            font-size: 1.5rem;
+            color: #2c5282;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .content-section p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #4a5568;
+            margin-bottom: 1.5rem;
+        }
+
+        .content-section ul, .content-section ol {
+            margin: 1.5rem 0;
+            padding-left: 2rem;
+        }
+
+        .content-section li {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #4a5568;
+            margin-bottom: 1rem;
+        }
+
+        .content-section strong {
+            color: #1a365d;
+            font-weight: 600;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+            border-left: 4px solid #3182ce;
+            padding: 2rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .benefit-card {
+            background: #ffffff;
+            padding: 2rem;
+            border-radius: 8px;
+            border: 1px solid #e2e8f0;
+            transition: all 0.3s ease;
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            border-color: #3182ce;
+        }
+
+        .benefit-card i {
+            font-size: 2.5rem;
+            color: #3182ce;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .benefit-card h4 {
+            font-size: 1.2rem;
+            color: #1a365d;
+            margin-bottom: 0.5rem;
+        }
+
+        .benefit-card p {
+            margin: 0;
+            font-size: 1rem;
+            color: #4a5568;
+        }
+
+        .process-section {
+            background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+            padding: 3rem 2rem;
+            border-radius: 8px;
+            margin: 3rem 0;
+        }
+
+        .process-section h2 {
+            color: #1a365d;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .process-step {
+            background: #ffffff;
+            padding: 2rem;
+            border-radius: 8px;
+            text-align: center;
+            position: relative;
+        }
+
+        .process-step .step-number {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #3182ce 0%, #2c5282 100%);
+            color: #ffffff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin: 0 auto 1rem;
+        }
+
+        .process-step h4 {
+            font-size: 1.1rem;
+            color: #1a365d;
+            margin-bottom: 0.5rem;
+        }
+
+        .process-step p {
+            margin: 0;
+            font-size: 0.95rem;
+            color: #4a5568;
+        }
+
+        .emphasis-box {
+            background: linear-gradient(135deg, #1a365d 0%, #2c5282 100%);
+            color: #ffffff;
+            padding: 2.5rem;
+            border-radius: 8px;
+            margin: 3rem 0;
+            text-align: center;
+        }
+
+        .emphasis-box h3 {
+            color: #ffffff;
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .emphasis-box p {
+            color: rgba(255, 255, 255, 0.95);
+            font-size: 1.1rem;
+            margin-bottom: 0;
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, #1a365d 0%, #2c5282 100%);
+            padding: 60px 2rem;
+            text-align: center;
+            margin-top: 4rem;
+        }
+
+        .cta-section h2 {
+            color: #ffffff;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .cta-section p {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-cta {
+            padding: 1rem 2.5rem;
+            background: #ffffff;
+            color: #1a365d;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .btn-cta:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(255, 255, 255, 0.3);
+        }
+
+        .btn-cta-secondary {
+            background: transparent;
+            color: #ffffff;
+            border: 2px solid #ffffff;
+        }
+
+        .btn-cta-secondary:hover {
+            background: #ffffff;
+            color: #1a365d;
+        }
+
+        @media (max-width: 768px) {
+            .service-detail-hero h1 {
+                font-size: 2rem;
+            }
+
+            .service-detail-hero p {
+                font-size: 1.1rem;
+            }
+
+            .content-section h2 {
+                font-size: 1.8rem;
+            }
+
+            .benefits-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .process-steps {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <img src="images/LOGO ONLINE SYSTEM NORMAL.png" alt="Online System Logo">
+            </a>
+            <ul class="nav-menu">
+                <li><a href="index.html#hero">Inicio</a></li>
+                <li><a href="index.html#about">Nosotros</a></li>
+                <li><a href="index.html#servicios">Servicios</a></li>
+                <li><a href="index.html#clientes">Clientes</a></li>
+                <li><a href="index.html#contacto" class="nav-cta">Contacto</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <section class="service-detail-hero">
+        <div class="container">
+            <div class="service-icon-large">
+                <i class="fas fa-robot"></i>
+            </div>
+            <h1>Inteligencia Artificial</h1>
+            <p>Soluciones de IA para automatización de procesos, chatbots inteligentes y análisis predictivo. Optimizamos operaciones con Machine Learning y procesamiento de lenguaje natural.</p>
+        </div>
+    </section>
+
+    <section class="service-detail-content">
+        <div class="content-section">
+            <h2>Implementación de Inteligencia Artificial con ONLINE System</h2>
+
+            <p><strong>Transforma tus procesos y toma decisiones estratégicas con tecnologías de Inteligencia Artificial (IA).</strong></p>
+
+            <p>En ONLINE System impulsamos la transformación digital de tu organización mediante la implementación de soluciones de Inteligencia Artificial, diseñadas para optimizar procesos, automatizar tareas críticas y mejorar la toma de decisiones con datos en tiempo real.</p>
+
+            <p>Integramos herramientas de <strong>Machine Learning, modelos predictivos, análisis avanzado de datos, automatización inteligente (IA + RPA)</strong> y asistentes conversacionales, permitiendo que tu negocio aumente su eficiencia, reduzca costos operativos y mejore la experiencia de tus clientes.</p>
+
+            <div class="highlight-box">
+                <h3>¿Qué logramos con IA en tu empresa?</h3>
+            </div>
+
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <i class="fas fa-cogs"></i>
+                    <h4>Automatización inteligente</h4>
+                    <p>De procesos repetitivos y operativos.</p>
+                </div>
+
+                <div class="benefit-card">
+                    <i class="fas fa-chart-line"></i>
+                    <h4>Modelos predictivos</h4>
+                    <p>Para anticipar riesgos, demandas y comportamientos.</p>
+                </div>
+
+                <div class="benefit-card">
+                    <i class="fas fa-star"></i>
+                    <h4>Sistemas de recomendación</h4>
+                    <p>Que mejoran ventas, atención al cliente y fidelización.</p>
+                </div>
+
+                <div class="benefit-card">
+                    <i class="fas fa-brain"></i>
+                    <h4>Análisis avanzado</h4>
+                    <p>De datos en tiempo real para decisiones estratégicas.</p>
+                </div>
+
+                <div class="benefit-card">
+                    <i class="fas fa-link"></i>
+                    <h4>Integración con sistemas</h4>
+                    <p>ERP, CORE y plataformas corporativas.</p>
+                </div>
+
+                <div class="benefit-card">
+                    <i class="fas fa-sync-alt"></i>
+                    <h4>Optimización continua</h4>
+                    <p>Mediante monitoreo, métricas y mejora continua.</p>
+                </div>
+            </div>
+
+            <div class="process-section">
+                <h2>Acompañamiento experto y personalizado</h2>
+                <p style="text-align: center; margin-bottom: 2rem; color: #4a5568;">Nuestro equipo te guía en todo el proceso:</p>
+
+                <div class="process-steps">
+                    <div class="process-step">
+                        <div class="step-number">1</div>
+                        <h4>Diagnóstico y diseño</h4>
+                        <p>De la solución a medida.</p>
+                    </div>
+
+                    <div class="process-step">
+                        <div class="step-number">2</div>
+                        <h4>Integración</h4>
+                        <p>Con tus sistemas existentes.</p>
+                    </div>
+
+                    <div class="process-step">
+                        <div class="step-number">3</div>
+                        <h4>Desarrollo de modelos</h4>
+                        <p>De IA personalizados.</p>
+                    </div>
+
+                    <div class="process-step">
+                        <div class="step-number">4</div>
+                        <h4>Capacitación</h4>
+                        <p>A tu equipo de trabajo.</p>
+                    </div>
+
+                    <div class="process-step">
+                        <div class="step-number">5</div>
+                        <h4>Soporte y mejora</h4>
+                        <p>Escalamiento del proyecto.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="emphasis-box">
+                <h3>Evoluciona hacia una operación más inteligente</h3>
+                <p>En ONLINE System te ayudamos a evolucionar hacia una operación más inteligente, eficiente y competitiva, utilizando tecnologías de IA alineadas a tus objetivos de negocio.</p>
+                <p style="margin-top: 1.5rem; font-size: 1.3rem;"><strong>Impulsa tu empresa al siguiente nivel con Inteligencia Artificial. ONLINE System te acompaña en cada paso.</strong></p>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <h2>¿Listo para implementar Inteligencia Artificial en tu empresa?</h2>
+            <p>Conversemos sobre cómo la IA puede transformar tus procesos y potenciar tu negocio.</p>
+            <div class="cta-buttons">
+                <a href="index.html#contacto" class="btn-cta">Contactar Ahora</a>
+                <a href="index.html#servicios" class="btn-cta btn-cta-secondary">Ver Todos los Servicios</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Online System</h4>
+                    <p>Transformamos empresas a través de la tecnología con más de 24 años de experiencia.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Servicios</h4>
+                    <ul>
+                        <li><a href="index.html#servicios">Transformación Digital</a></li>
+                        <li><a href="index.html#servicios">Desarrollo de Software</a></li>
+                        <li><a href="index.html#servicios">Cloud Computing</a></li>
+                        <li><a href="index.html#servicios">Ciberseguridad</a></li>
+                        <li><a href="index.html#servicios">Soporte y Mantención TI</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Contacto</h4>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Santiago, Chile</li>
+                        <li><i class="fas fa-phone"></i> +56 9 9607 0383</li>
+                        <li><i class="fas fa-envelope"></i> contacto@onlinesystem.cl</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 Online System. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
