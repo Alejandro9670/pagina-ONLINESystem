@@ -210,15 +210,36 @@ body {
 }
 
 .hero-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
+    display: flex;
+    flex-direction: column;
     align-items: center;
     position: relative;
     z-index: 2;
     padding: 2rem;
     max-width: 1200px;
     margin: 0 auto;
+    min-height: 80vh;
+}
+
+.hero-icon {
+    display: none;
+    font-size: 8rem;
+    color: #10b981;
+    margin-top: auto;
+    margin-bottom: 4rem;
+    animation: fadeInUp 1s ease;
+    text-shadow: 0 4px 20px rgba(16, 185, 129, 0.4);
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .hero-text h1 {

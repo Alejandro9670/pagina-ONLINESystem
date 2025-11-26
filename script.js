@@ -216,7 +216,8 @@ const slideContent = [
         description: '',
         showAllButtons: false,
         showContent: true,
-        buttonText: 'Contactar a ONLINE System por Software Inmobiliario'
+        buttonText: 'Contactar a ONLINE System por Software Inmobiliario',
+        showIcon: true
     }
 ];
 
@@ -243,6 +244,7 @@ function showSlide(index) {
     const btnPrimary = document.querySelector('.btn-primary');
     const btnSecondary = document.querySelector('.btn-secondary');
     const btnTertiary = document.querySelector('.btn-tertiary');
+    const heroIcon = document.querySelector('.hero-icon');
 
     if (heroTitle && slideContent[index]) {
         heroTitle.innerHTML = slideContent[index].title;
@@ -267,6 +269,15 @@ function showSlide(index) {
         } else {
             btnSecondary.style.display = 'none';
             btnTertiary.style.display = 'none';
+        }
+
+        // Show/hide icon based on slide content
+        if (heroIcon) {
+            if (slideContent[index].showIcon) {
+                heroIcon.style.display = 'block';
+            } else {
+                heroIcon.style.display = 'none';
+            }
         }
     }
 }
