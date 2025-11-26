@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infraestructura y Redes - Online System</title>
+    <meta name="description" content="Diseño e implementación de redes LAN/WAN corporativas, cableado estructurado certificado, datacenters y estudios de instalación con conectividad de alto rendimiento.">
+    <link rel="icon" type="image/png" href="images/LOGO ONLINE SYSTEM NORMAL.png">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .service-detail-hero {
+            min-height: 60vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            background: linear-gradient(135deg, #1a365d 0%, #2c5282 100%);
+            padding: 120px 0 60px;
+        }
+
+        .service-detail-content {
+            padding: 80px 0;
+            background: #ffffff;
+        }
+
+        .service-detail-hero h1 {
+            font-size: 3rem;
+            color: #ffffff;
+            margin-bottom: 1.5rem;
+        }
+
+        .service-detail-hero p {
+            font-size: 1.3rem;
+            color: rgba(255, 255, 255, 0.9);
+            max-width: 800px;
+        }
+
+        .service-icon-large {
+            width: 100px;
+            height: 100px;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 2rem;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .service-icon-large i {
+            font-size: 3rem;
+            color: #ffffff;
+        }
+
+        .content-section {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .content-section h2 {
+            font-size: 2.2rem;
+            color: #1a365d;
+            margin-bottom: 1.5rem;
+            margin-top: 3rem;
+        }
+
+        .content-section h3 {
+            font-size: 1.5rem;
+            color: #2c5282;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .content-section p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #4a5568;
+            margin-bottom: 1.5rem;
+        }
+
+        .content-section ul, .content-section ol {
+            margin: 1.5rem 0;
+            padding-left: 2rem;
+        }
+
+        .content-section li {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #4a5568;
+            margin-bottom: 1rem;
+        }
+
+        .content-section strong {
+            color: #1a365d;
+            font-weight: 600;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+            border-left: 4px solid #3182ce;
+            padding: 2rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .service-card {
+            background: #ffffff;
+            padding: 2rem;
+            border-radius: 8px;
+            border: 1px solid #e2e8f0;
+            transition: all 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            border-color: #3182ce;
+        }
+
+        .service-card i {
+            font-size: 2.5rem;
+            color: #3182ce;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .service-card h4 {
+            font-size: 1.2rem;
+            color: #1a365d;
+            margin-bottom: 0.5rem;
+        }
+
+        .service-card p {
+            margin: 0;
+            font-size: 1rem;
+            color: #4a5568;
+        }
+
+        .features-list {
+            background: #ffffff;
+            padding: 2rem;
+            border-radius: 8px;
+            border: 1px solid #e2e8f0;
+            margin: 2rem 0;
+        }
+
+        .features-list ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .features-list li {
+            padding: 0.75rem 0;
+            border-bottom: 1px solid #edf2f7;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .features-list li:last-child {
+            border-bottom: none;
+        }
+
+        .features-list li i {
+            color: #3182ce;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+
+        .emphasis-box {
+            background: linear-gradient(135deg, #1a365d 0%, #2c5282 100%);
+            color: #ffffff;
+            padding: 2.5rem;
+            border-radius: 8px;
+            margin: 3rem 0;
+            text-align: center;
+        }
+
+        .emphasis-box h3 {
+            color: #ffffff;
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .emphasis-box p {
+            color: rgba(255, 255, 255, 0.95);
+            font-size: 1.1rem;
+            margin-bottom: 0;
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, #1a365d 0%, #2c5282 100%);
+            padding: 60px 2rem;
+            text-align: center;
+            margin-top: 4rem;
+        }
+
+        .cta-section h2 {
+            color: #ffffff;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .cta-section p {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-cta {
+            padding: 1rem 2.5rem;
+            background: #ffffff;
+            color: #1a365d;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .btn-cta:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(255, 255, 255, 0.3);
+        }
+
+        .btn-cta-secondary {
+            background: transparent;
+            color: #ffffff;
+            border: 2px solid #ffffff;
+        }
+
+        .btn-cta-secondary:hover {
+            background: #ffffff;
+            color: #1a365d;
+        }
+
+        @media (max-width: 768px) {
+            .service-detail-hero h1 {
+                font-size: 2rem;
+            }
+
+            .service-detail-hero p {
+                font-size: 1.1rem;
+            }
+
+            .content-section h2 {
+                font-size: 1.8rem;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <img src="images/LOGO ONLINE SYSTEM NORMAL.png" alt="Online System Logo">
+            </a>
+            <ul class="nav-menu">
+                <li><a href="index.html#hero">Inicio</a></li>
+                <li><a href="index.html#about">Nosotros</a></li>
+                <li><a href="index.html#servicios">Servicios</a></li>
+                <li><a href="index.html#clientes">Clientes</a></li>
+                <li><a href="index.html#contacto" class="nav-cta">Contacto</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <section class="service-detail-hero">
+        <div class="container">
+            <div class="service-icon-large">
+                <i class="fas fa-network-wired"></i>
+            </div>
+            <h1>Infraestructura y Redes</h1>
+            <p>Diseño e implementación de redes LAN/WAN corporativas, cableado estructurado certificado, datacenters y estudios de instalación con conectividad de alto rendimiento.</p>
+        </div>
+    </section>
+
+    <section class="service-detail-content">
+        <div class="content-section">
+            <h2>Infraestructura y Redes: Tecnología de Alto Desempeño para la Operación de tu Negocio</h2>
+
+            <p>En ONLINE System diseñamos, implementamos y administramos <strong>Infraestructura TI y Redes de alto rendimiento</strong>, asegurando continuidad operacional, escalabilidad y máxima disponibilidad para tus plataformas críticas.</p>
+
+            <p>Nuestro enfoque combina <strong>arquitectura robusta, ciberseguridad avanzada y automatización</strong>, esenciales para empresas que requieren una operación segura, estable y preparada para el crecimiento.</p>
+
+            <div class="highlight-box">
+                <p>Optimizamos y modernizamos entornos tecnológicos mediante soluciones de <strong>servidores físicos y virtuales, redes LAN/WAN, Cloud Híbrida, cableado estructurado, gestión de firewalls, switches, balanceadores, segmentación de red y monitoreo inteligente</strong>.</p>
+                <p>Integramos tecnologías líderes en la industria para garantizar <strong>baja latencia, alta velocidad, eficiencia energética y resiliencia frente a fallas</strong>.</p>
+            </div>
+
+            <p>Con una visión orientada a la transformación digital, apoyamos a tu organización en la adopción de infraestructuras preparadas para <strong>Big Data, Inteligencia Artificial, automatización de procesos, ERP y sistemas CORE</strong>, fortaleciendo la interoperabilidad y el rendimiento de tus aplicaciones.</p>
+
+            <h3>Nuestro equipo especialista asegura:</h3>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <i class="fas fa-project-diagram"></i>
+                    <h4>Diseño arquitectónico</h4>
+                    <p>Escalable y seguro para tu infraestructura.</p>
+                </div>
+
+                <div class="service-card">
+                    <i class="fas fa-network-wired"></i>
+                    <h4>Implementación y configuración</h4>
+                    <p>De redes empresariales de alto rendimiento.</p>
+                </div>
+
+                <div class="service-card">
+                    <i class="fas fa-cloud-upload-alt"></i>
+                    <h4>Migración y soporte</h4>
+                    <p>En entornos On-Premise, Cloud y Híbridos.</p>
+                </div>
+
+                <div class="service-card">
+                    <i class="fas fa-desktop"></i>
+                    <h4>Monitoreo proactivo</h4>
+                    <p>Para garantizar disponibilidad 24/7.</p>
+                </div>
+
+                <div class="service-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h4>Ciberseguridad perimetral</h4>
+                    <p>Y Zero Trust como pilar estratégico.</p>
+                </div>
+
+                <div class="service-card">
+                    <i class="fas fa-chart-line"></i>
+                    <h4>Optimización de infraestructura</h4>
+                    <p>Para mejorar productividad y reducir costos.</p>
+                </div>
+            </div>
+
+            <div class="features-list">
+                <h3>Soluciones que implementamos:</h3>
+                <ul>
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        <span><strong>Servidores físicos y virtuales:</strong> Ambientes optimizados para aplicaciones críticas.</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        <span><strong>Redes LAN/WAN corporativas:</strong> Conectividad segura y de alta velocidad.</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        <span><strong>Cloud Híbrida:</strong> Flexibilidad entre infraestructura local y en la nube.</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        <span><strong>Cableado estructurado certificado:</strong> Estándares internacionales de calidad.</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        <span><strong>Firewalls y balanceadores:</strong> Seguridad perimetral y distribución de carga.</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        <span><strong>Segmentación de red:</strong> Aislamiento y protección de recursos críticos.</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        <span><strong>Monitoreo inteligente:</strong> Detección temprana de anomalías y fallas.</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="emphasis-box">
+                <h3>Transformamos tu infraestructura tecnológica</h3>
+                <p>En ONLINE System, transformamos tu infraestructura tecnológica en un <strong>ecosistema confiable, eficiente y preparado para el futuro</strong>.</p>
+                <p style="margin-top: 1rem;">Potenciamos la estabilidad de tu operación y habilitamos un crecimiento seguro y continuo.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <h2>¿Necesitas modernizar tu infraestructura tecnológica?</h2>
+            <p>Conversemos sobre cómo podemos diseñar y optimizar tu infraestructura de TI y redes.</p>
+            <div class="cta-buttons">
+                <a href="index.html#contacto" class="btn-cta">Contactar Ahora</a>
+                <a href="index.html#servicios" class="btn-cta btn-cta-secondary">Ver Todos los Servicios</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Online System</h4>
+                    <p>Transformamos empresas a través de la tecnología con más de 24 años de experiencia.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Servicios</h4>
+                    <ul>
+                        <li><a href="index.html#servicios">Transformación Digital</a></li>
+                        <li><a href="index.html#servicios">Desarrollo de Software</a></li>
+                        <li><a href="index.html#servicios">Cloud Computing</a></li>
+                        <li><a href="index.html#servicios">Ciberseguridad</a></li>
+                        <li><a href="index.html#servicios">Soporte y Mantención TI</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Contacto</h4>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Santiago, Chile</li>
+                        <li><i class="fas fa-phone"></i> +56 9 9607 0383</li>
+                        <li><i class="fas fa-envelope"></i> contacto@onlinesystem.cl</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 Online System. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
