@@ -200,17 +200,20 @@ const slideContent = [
     {
         title: 'Soluciones Tecnológicas <span class="highlight">Integrales y Personalizadas</span>',
         description: 'Más de 24 años transformando empresas a través de la tecnología con consultoría especializada, desarrollo de software, automatización, servicios de soporte y mantenimiento de infraestructura TI',
-        showAllButtons: true
+        showAllButtons: true,
+        showContent: true
     },
     {
         title: 'Seguridad en Redes OT <span class="highlight">Consultoría especializada para Asegurar Continuidad Operativa</span>',
         description: '',
-        showAllButtons: false
+        showAllButtons: false,
+        showContent: true
     },
     {
-        title: 'Soluciones Tecnológicas <span class="highlight">Integrales y Personalizadas</span>',
-        description: 'Más de 24 años transformando empresas a través de la tecnología con consultoría especializada, desarrollo de software, automatización, servicios de soporte y mantenimiento de infraestructura TI',
-        showAllButtons: true
+        title: '',
+        description: '',
+        showAllButtons: false,
+        showContent: false
     }
 ];
 
@@ -233,12 +236,21 @@ function showSlide(index) {
     // Update text content
     const heroTitle = document.getElementById('hero-title');
     const heroDescription = document.getElementById('hero-description');
+    const heroText = document.querySelector('.hero-text');
+    const btnPrimary = document.querySelector('.btn-primary');
     const btnSecondary = document.querySelector('.btn-secondary');
     const btnTertiary = document.querySelector('.btn-tertiary');
 
     if (heroTitle && slideContent[index]) {
         heroTitle.innerHTML = slideContent[index].title;
         heroDescription.textContent = slideContent[index].description;
+
+        // Show/hide entire content section based on slide
+        if (slideContent[index].showContent) {
+            heroText.style.display = 'block';
+        } else {
+            heroText.style.display = 'none';
+        }
 
         // Show/hide buttons based on slide content
         if (slideContent[index].showAllButtons) {
