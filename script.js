@@ -195,6 +195,22 @@ const slides = document.querySelectorAll('.slide');
 const indicators = document.querySelectorAll('.indicator');
 const totalSlides = slides.length;
 
+// Content for each slide
+const slideContent = [
+    {
+        title: 'Soluciones Tecnológicas <span class="highlight">Integrales y Personalizadas</span>',
+        description: 'Más de 24 años transformando empresas a través de la tecnología con consultoría especializada, desarrollo de software, automatización, servicios de soporte y mantenimiento de infraestructura TI'
+    },
+    {
+        title: 'Soluciones de <span class="highlight">Implementación, Integración y IA</span>',
+        description: ''
+    },
+    {
+        title: 'Soluciones Tecnológicas <span class="highlight">Integrales y Personalizadas</span>',
+        description: 'Más de 24 años transformando empresas a través de la tecnología con consultoría especializada, desarrollo de software, automatización, servicios de soporte y mantenimiento de infraestructura TI'
+    }
+];
+
 function initializeSlider() {
     // Auto-play slider
     setInterval(() => {
@@ -206,21 +222,30 @@ function showSlide(index) {
     // Remove active class from all slides and indicators
     slides.forEach(slide => slide.classList.remove('active'));
     indicators.forEach(indicator => indicator.classList.remove('active'));
-    
+
     // Add active class to current slide and indicator
     slides[index].classList.add('active');
     indicators[index].classList.add('active');
+
+    // Update text content
+    const heroTitle = document.getElementById('hero-title');
+    const heroDescription = document.getElementById('hero-description');
+
+    if (heroTitle && slideContent[index]) {
+        heroTitle.innerHTML = slideContent[index].title;
+        heroDescription.textContent = slideContent[index].description;
+    }
 }
 
 function changeSlide(direction) {
     currentSlideIndex += direction;
-    
+
     if (currentSlideIndex >= totalSlides) {
         currentSlideIndex = 0;
     } else if (currentSlideIndex < 0) {
         currentSlideIndex = totalSlides - 1;
     }
-    
+
     showSlide(currentSlideIndex);
 }
 
