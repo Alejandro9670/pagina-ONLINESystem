@@ -422,6 +422,57 @@ a[href^="mailto:"]:hover {
     50% { transform: translateY(-20px); }
 }
 
+/* Video Corporativo for Banner 1 */
+.banner1-video {
+    position: absolute;
+    bottom: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 4;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s ease;
+}
+
+.banner1-video.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.banner1-video a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    background: linear-gradient(135deg, #3182ce 0%, #2c5282 100%);
+    color: #ffffff;
+    padding: 1.2rem 2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    box-shadow: 0 8px 25px rgba(49, 130, 206, 0.4);
+    transition: all 0.3s ease;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.banner1-video a:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 35px rgba(49, 130, 206, 0.5);
+    background: linear-gradient(135deg, #2c5282 0%, #1a365d 100%);
+}
+
+.banner1-video i {
+    font-size: 2rem;
+    color: #ffffff;
+}
+
+.banner1-video span {
+    color: #ffffff;
+    text-align: center;
+    font-weight: 600;
+}
+
 /* WhatsApp Contact for Banner 3 - Software Inmobiliario */
 .banner3-whatsapp {
     position: absolute;
@@ -1467,6 +1518,24 @@ a[href^="mailto:"]:hover {
 }
 
 @media (max-width: 768px) {
+    .banner1-video {
+        bottom: 60px;
+    }
+
+    .banner1-video a {
+        padding: 1rem 1.5rem;
+        font-size: 0.9rem;
+        gap: 0.8rem;
+    }
+
+    .banner1-video i {
+        font-size: 1.5rem;
+    }
+
+    .banner1-video span {
+        font-size: 0.85rem;
+    }
+
     .banner2-whatsapp {
         bottom: 60px;
     }
@@ -1772,6 +1841,25 @@ a[href^="mailto:"]:hover {
 }
 
 @media (max-width: 480px) {
+    .banner1-video {
+        bottom: 50px;
+    }
+
+    .banner1-video a {
+        padding: 0.8rem 1.2rem;
+        font-size: 0.8rem;
+        gap: 0.6rem;
+        flex-direction: column;
+    }
+
+    .banner1-video i {
+        font-size: 1.5rem;
+    }
+
+    .banner1-video span {
+        font-size: 0.75rem;
+    }
+
     .banner2-whatsapp {
         bottom: 50px;
     }

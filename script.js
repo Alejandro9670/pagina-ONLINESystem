@@ -250,6 +250,7 @@ function showSlide(index) {
     const btnPrimary = document.querySelector('.btn-primary');
     const btnSecondary = document.querySelector('.btn-secondary');
     const btnTertiary = document.querySelector('.btn-tertiary');
+    const banner1Video = document.getElementById('banner1Video');
     const banner2Whatsapp = document.getElementById('banner2Whatsapp');
     const banner3Whatsapp = document.getElementById('banner3Whatsapp');
     const banner4Whatsapp = document.getElementById('banner4Whatsapp');
@@ -284,6 +285,15 @@ function showSlide(index) {
             } else {
                 btnPrimary.style.display = 'inline-block';
             }
+        }
+    }
+
+    // Show/hide Video button only on banner 1 (index 0)
+    if (banner1Video) {
+        if (index === 0) {
+            banner1Video.classList.add('show');
+        } else {
+            banner1Video.classList.remove('show');
         }
     }
 
