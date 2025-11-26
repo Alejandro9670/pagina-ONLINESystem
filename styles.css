@@ -221,6 +221,14 @@ body {
     margin: 0 auto;
 }
 
+.server-list {
+    line-height: 2;
+    font-size: 1.1rem;
+    text-align: left;
+    display: inline-block;
+    margin: 0 auto;
+}
+
 .hero-text h1 {
     font-size: 3.5rem;
     font-weight: 700;

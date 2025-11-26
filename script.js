@@ -220,7 +220,7 @@ const slideContent = [
     },
     {
         title: 'Comercialización de Equipos de <span class="highlight">Infraestructura</span>',
-        description: 'Servidores Enterprise • Servidores Para IA • Servidores para Centros de Datos • Servidores de Almacenamiento • Servidores de Borde',
+        description: '<div class="server-list">• Servidores Enterprise<br>• Servidores Para IA<br>• Servidores para Centros de Datos<br>• Servidores de Almacenamiento<br>• Servidores de Borde</div>',
         showAllButtons: false,
         showContent: true,
         buttonText: 'Contáctanos'
