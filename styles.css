@@ -632,20 +632,6 @@ a[href^="mailto:"]:hover {
     background: linear-gradient(180deg, #f7fafc 0%, #ffffff 100%);
 }
 
-.video-section .section-header h2 {
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: #1a365d;
-    margin-bottom: 1rem;
-}
-
-.video-section .section-header p {
-    font-size: 1.2rem;
-    color: #4a5568;
-    max-width: 600px;
-    margin: 0 auto;
-}
-
 .video-container {
     max-width: 900px;
     margin: 0 auto;
@@ -670,10 +656,6 @@ a[href^="mailto:"]:hover {
     height: 100%;
     border-radius: 16px;
     border: none;
-}
-
-.video-wrapper video {
-    object-fit: contain;
 }
 
 /* Services Section */
@@ -1608,23 +1590,6 @@ a[href^="mailto:"]:hover {
         font-size: 0.85rem;
     }
 
-    .video-section {
-        padding: 60px 0;
-    }
-
-    .video-section .section-header h2 {
-        font-size: 2rem;
-    }
-
-    .video-section .section-header p {
-        font-size: 1rem;
-        padding: 0 1rem;
-    }
-
-    .video-container {
-        padding: 0 1rem;
-    }
-
     .hamburger {
         display: flex;
     }
@@ -1950,18 +1915,6 @@ a[href^="mailto:"]:hover {
 
     .banner4-whatsapp span {
         font-size: 0.75rem;
-    }
-
-    .video-section {
-        padding: 40px 0;
-    }
-
-    .video-section .section-header h2 {
-        font-size: 1.6rem;
-    }
-
-    .video-section .section-header p {
-        font-size: 0.9rem;
     }
 
     .container {
