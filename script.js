@@ -210,8 +210,8 @@ const slideContent = [
         showContent: true
     },
     {
-        title: '<span class="highlight">ONLINE System</span> Apoya la Implementación de Software Inmobiliario',
-        description: '',
+        title: '<span class="highlight">ONLINE System</span> te apoya en la implementación de software inmobiliario',
+        description: '<i class="fas fa-building"></i> ONLINE System Implementas Software Inmobiliario',
         showAllButtons: false,
         showContent: true
     }
