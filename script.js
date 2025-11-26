@@ -250,6 +250,7 @@ function showSlide(index) {
     const btnPrimary = document.querySelector('.btn-primary');
     const btnSecondary = document.querySelector('.btn-secondary');
     const btnTertiary = document.querySelector('.btn-tertiary');
+    const banner2Whatsapp = document.getElementById('banner2Whatsapp');
     const banner3Whatsapp = document.getElementById('banner3Whatsapp');
     const banner4Whatsapp = document.getElementById('banner4Whatsapp');
 
@@ -277,12 +278,21 @@ function showSlide(index) {
         } else {
             btnSecondary.style.display = 'none';
             btnTertiary.style.display = 'none';
-            // Hide primary button on banner 3 (index 2) and banner 4 (index 3)
-            if (index === 2 || index === 3) {
+            // Hide primary button on banner 2 (index 1), banner 3 (index 2) and banner 4 (index 3)
+            if (index === 1 || index === 2 || index === 3) {
                 btnPrimary.style.display = 'none';
             } else {
                 btnPrimary.style.display = 'inline-block';
             }
+        }
+    }
+
+    // Show/hide WhatsApp button only on banner 2 (index 1)
+    if (banner2Whatsapp) {
+        if (index === 1) {
+            banner2Whatsapp.classList.add('show');
+        } else {
+            banner2Whatsapp.classList.remove('show');
         }
     }
 
