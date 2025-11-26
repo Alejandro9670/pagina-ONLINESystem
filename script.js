@@ -210,10 +210,10 @@ const slideContent = [
         showContent: true
     },
     {
-        title: '',
+        title: '<span class="highlight">ONLINE System</span> te apoyamos en la implementación de tu Software Inmobiliario',
         description: '',
         showAllButtons: false,
-        showContent: false
+        showContent: true
     }
 ];
 
