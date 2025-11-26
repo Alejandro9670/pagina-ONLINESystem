@@ -243,7 +243,6 @@ function showSlide(index) {
     const btnPrimary = document.querySelector('.btn-primary');
     const btnSecondary = document.querySelector('.btn-secondary');
     const btnTertiary = document.querySelector('.btn-tertiary');
-    const banner3ContactIcon = document.getElementById('banner3ContactIcon');
 
     if (heroTitle && slideContent[index]) {
         heroTitle.innerHTML = slideContent[index].title;
@@ -268,15 +267,6 @@ function showSlide(index) {
         } else {
             btnSecondary.style.display = 'none';
             btnTertiary.style.display = 'none';
-        }
-    }
-
-    // Show/hide contact icon only on banner 3 (index 2)
-    if (banner3ContactIcon) {
-        if (index === 2) {
-            banner3ContactIcon.classList.add('show');
-        } else {
-            banner3ContactIcon.classList.remove('show');
         }
     }
 }
