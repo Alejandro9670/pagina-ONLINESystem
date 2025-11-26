@@ -277,8 +277,8 @@ function showSlide(index) {
         } else {
             btnSecondary.style.display = 'none';
             btnTertiary.style.display = 'none';
-            // Hide primary button on banner 4 (index 3)
-            if (index === 3) {
+            // Hide primary button on banner 3 (index 2) and banner 4 (index 3)
+            if (index === 2 || index === 3) {
                 btnPrimary.style.display = 'none';
             } else {
                 btnPrimary.style.display = 'inline-block';
