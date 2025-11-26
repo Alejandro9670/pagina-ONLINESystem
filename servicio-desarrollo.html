@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desarrollo de Software - Online System</title>
+    <meta name="description" content="Creamos aplicaciones personalizadas con metodologías ágiles, desde sistemas web y móviles hasta integraciones ERP/CRM y soluciones logísticas con RFID.">
+    <link rel="icon" type="image/png" href="images/LOGO ONLINE SYSTEM NORMAL.png">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .service-detail-hero {
+            min-height: 60vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            background: linear-gradient(135deg, #1a365d 0%, #2c5282 100%);
+            padding: 120px 0 60px;
+        }
+
+        .service-detail-content {
+            padding: 80px 0;
+            background: #ffffff;
+        }
+
+        .service-detail-hero h1 {
+            font-size: 3rem;
+            color: #ffffff;
+            margin-bottom: 1.5rem;
+        }
+
+        .service-detail-hero p {
+            font-size: 1.3rem;
+            color: rgba(255, 255, 255, 0.9);
+            max-width: 800px;
+        }
+
+        .service-icon-large {
+            width: 100px;
+            height: 100px;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 2rem;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .service-icon-large i {
+            font-size: 3rem;
+            color: #ffffff;
+        }
+
+        .content-section {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .content-section h2 {
+            font-size: 2.2rem;
+            color: #1a365d;
+            margin-bottom: 1.5rem;
+            margin-top: 3rem;
+        }
+
+        .content-section h3 {
+            font-size: 1.5rem;
+            color: #2c5282;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .content-section p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #4a5568;
+            margin-bottom: 1.5rem;
+        }
+
+        .content-section ul, .content-section ol {
+            margin: 1.5rem 0;
+            padding-left: 2rem;
+        }
+
+        .content-section li {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #4a5568;
+            margin-bottom: 1rem;
+        }
+
+        .content-section strong {
+            color: #1a365d;
+            font-weight: 600;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+            border-left: 4px solid #3182ce;
+            padding: 2rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .feature-card {
+            background: #ffffff;
+            padding: 2rem;
+            border-radius: 8px;
+            border: 1px solid #e2e8f0;
+            transition: all 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .feature-card i {
+            font-size: 2.5rem;
+            color: #3182ce;
+            margin-bottom: 1rem;
+        }
+
+        .feature-card h3 {
+            font-size: 1.3rem;
+            color: #1a365d;
+            margin-top: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .feature-card p {
+            font-size: 1rem;
+            color: #4a5568;
+            margin: 0;
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, #1a365d 0%, #2c5282 100%);
+            padding: 60px 2rem;
+            text-align: center;
+            margin-top: 4rem;
+        }
+
+        .cta-section h2 {
+            color: #ffffff;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .cta-section p {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-cta {
+            padding: 1rem 2.5rem;
+            background: #ffffff;
+            color: #1a365d;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .btn-cta:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(255, 255, 255, 0.3);
+        }
+
+        .btn-cta-secondary {
+            background: transparent;
+            color: #ffffff;
+            border: 2px solid #ffffff;
+        }
+
+        .btn-cta-secondary:hover {
+            background: #ffffff;
+            color: #1a365d;
+        }
+
+        @media (max-width: 768px) {
+            .service-detail-hero h1 {
+                font-size: 2rem;
+            }
+
+            .service-detail-hero p {
+                font-size: 1.1rem;
+            }
+
+            .content-section h2 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <img src="images/LOGO ONLINE SYSTEM NORMAL.png" alt="Online System Logo">
+            </a>
+            <ul class="nav-menu">
+                <li><a href="index.html#hero">Inicio</a></li>
+                <li><a href="index.html#about">Nosotros</a></li>
+                <li><a href="index.html#servicios">Servicios</a></li>
+                <li><a href="index.html#clientes">Clientes</a></li>
+                <li><a href="index.html#contacto" class="nav-cta">Contacto</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <section class="service-detail-hero">
+        <div class="container">
+            <div class="service-icon-large">
+                <i class="fas fa-laptop-code"></i>
+            </div>
+            <h1>Desarrollo de Software</h1>
+            <p>Creamos aplicaciones personalizadas con metodologías ágiles, desde sistemas web y móviles hasta integraciones ERP/CRM y soluciones logísticas con RFID.</p>
+        </div>
+    </section>
+
+    <section class="service-detail-content">
+        <div class="content-section">
+            <h2>Desarrollo de Software a la Medida para Integrar y Automatizar tu ERP y Sistemas CORE</h2>
+
+            <p>El desarrollo de software a la medida permite crear soluciones tecnológicas totalmente adaptadas a los procesos clave de tu organización, asegurando una integración fluida entre tu ERP, tus sistemas CORE y las demás plataformas críticas de tu negocio.</p>
+
+            <p>A través de arquitecturas flexibles, APIs seguras y automatización inteligente, es posible conectar datos, eliminar tareas manuales y mejorar la eficiencia operativa.</p>
+
+            <div class="highlight-box">
+                <h3>Con un enfoque basado en buenas prácticas de TI, metodologías ágiles, estándares DevOps e integración continua, el software a la medida ofrece:</h3>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <i class="fas fa-sync-alt"></i>
+                    <h3>Integración en tiempo real</h3>
+                    <p>Conectamos tu ERP, CORE y sistemas externos para un flujo de información continuo y sincronizado.</p>
+                </div>
+
+                <div class="feature-card">
+                    <i class="fas fa-cogs"></i>
+                    <h3>Automatización de procesos críticos</h3>
+                    <p>Reducimos errores y tiempos operativos mediante automatización inteligente de tareas repetitivas.</p>
+                </div>
+
+                <div class="feature-card">
+                    <i class="fas fa-database"></i>
+                    <h3>Optimización del flujo de información</h3>
+                    <p>Aseguramos datos centralizados y consistentes en toda tu organización.</p>
+                </div>
+
+                <div class="feature-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Escalabilidad y seguridad</h3>
+                    <p>Soluciones alineadas a los requisitos de tu negocio con máximos estándares de seguridad.</p>
+                </div>
+
+                <div class="feature-card">
+                    <i class="fas fa-puzzle-piece"></i>
+                    <h3>Adaptación total</h3>
+                    <p>Diseño personalizado a tu modelo de operación, sin limitaciones de herramientas genéricas.</p>
+                </div>
+            </div>
+
+            <div class="highlight-box">
+                <h3>El resultado</h3>
+                <p>Una solución robusta, interoperable y diseñada para aumentar la eficiencia, mejorar la trazabilidad y potenciar la toma de decisiones a nivel estratégico.</p>
+                <p style="margin-top: 1.5rem;">El desarrollo a la medida se convierte en un habilitador clave para organizaciones que buscan <strong>transformación digital, continuidad operativa, integraciones avanzadas y procesos más ágiles.</strong></p>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <h2>¿Necesitas desarrollar software a la medida?</h2>
+            <p>Conversemos sobre cómo podemos crear la solución perfecta para integrar y optimizar tus sistemas.</p>
+            <div class="cta-buttons">
+                <a href="index.html#contacto" class="btn-cta">Contactar Ahora</a>
+                <a href="index.html#servicios" class="btn-cta btn-cta-secondary">Ver Todos los Servicios</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Online System</h4>
+                    <p>Transformamos empresas a través de la tecnología con más de 24 años de experiencia.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Servicios</h4>
+                    <ul>
+                        <li><a href="index.html#servicios">Transformación Digital</a></li>
+                        <li><a href="index.html#servicios">Desarrollo de Software</a></li>
+                        <li><a href="index.html#servicios">Cloud Computing</a></li>
+                        <li><a href="index.html#servicios">Ciberseguridad</a></li>
+                        <li><a href="index.html#servicios">Soporte y Mantención TI</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Contacto</h4>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Santiago, Chile</li>
+                        <li><i class="fas fa-phone"></i> +56 9 9607 0383</li>
+                        <li><i class="fas fa-envelope"></i> contacto@onlinesystem.cl</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 Online System. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
