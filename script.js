@@ -205,7 +205,7 @@ const slideContent = [
         buttonText: 'Contáctanos'
     },
     {
-        title: 'Seguridad en Redes OT <span class="highlight">Consultoría especializada para Asegurar Continuidad Operativa</span>',
+        title: 'Seguridad en Redes OT <span class="highlight">Consultoría Especializada para Asegurar Continuidad Operativa</span>',
         description: '',
         showAllButtons: false,
         showContent: true,
