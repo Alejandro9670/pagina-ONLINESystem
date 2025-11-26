@@ -243,6 +243,7 @@ function showSlide(index) {
     const btnPrimary = document.querySelector('.btn-primary');
     const btnSecondary = document.querySelector('.btn-secondary');
     const btnTertiary = document.querySelector('.btn-tertiary');
+    const banner3Whatsapp = document.getElementById('banner3Whatsapp');
 
     if (heroTitle && slideContent[index]) {
         heroTitle.innerHTML = slideContent[index].title;
@@ -267,6 +268,15 @@ function showSlide(index) {
         } else {
             btnSecondary.style.display = 'none';
             btnTertiary.style.display = 'none';
+        }
+    }
+
+    // Show/hide WhatsApp button only on banner 3 (index 2)
+    if (banner3Whatsapp) {
+        if (index === 2) {
+            banner3Whatsapp.classList.add('show');
+        } else {
+            banner3Whatsapp.classList.remove('show');
         }
     }
 }
