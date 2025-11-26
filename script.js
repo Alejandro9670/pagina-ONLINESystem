@@ -217,6 +217,13 @@ const slideContent = [
         showAllButtons: false,
         showContent: true,
         buttonText: 'Contactar a ONLINE System por Software Inmobiliario'
+    },
+    {
+        title: 'Comercialización de Equipos de <span class="highlight">Infraestructura</span>',
+        description: 'Servidores Enterprise • Servidores Para IA • Servidores para Centros de Datos • Servidores de Almacenamiento • Servidores de Borde',
+        showAllButtons: false,
+        showContent: true,
+        buttonText: 'Contáctanos'
     }
 ];
 
@@ -244,6 +251,7 @@ function showSlide(index) {
     const btnSecondary = document.querySelector('.btn-secondary');
     const btnTertiary = document.querySelector('.btn-tertiary');
     const banner3Whatsapp = document.getElementById('banner3Whatsapp');
+    const banner4Whatsapp = document.getElementById('banner4Whatsapp');
 
     if (heroTitle && slideContent[index]) {
         heroTitle.innerHTML = slideContent[index].title;
@@ -277,6 +285,15 @@ function showSlide(index) {
             banner3Whatsapp.classList.add('show');
         } else {
             banner3Whatsapp.classList.remove('show');
+        }
+    }
+
+    // Show/hide WhatsApp button only on banner 4 (index 3)
+    if (banner4Whatsapp) {
+        if (index === 3) {
+            banner4Whatsapp.classList.add('show');
+        } else {
+            banner4Whatsapp.classList.remove('show');
         }
     }
 }
