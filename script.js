@@ -210,8 +210,8 @@ const slideContent = [
         showContent: true
     },
     {
-        title: '<span class="highlight">ONLINE System</span> te apoya en la implementación de Software Inmobiliario',
-        description: 'Contacta a ONLINE System para conocer el mejor Software de Portal y administración de activos Inmobiliarios',
+        title: '<span class="highlight">ONLINE System</span> Apoya la Implementación de Software Inmobiliario',
+        description: '',
         showAllButtons: false,
         showContent: true
     }
