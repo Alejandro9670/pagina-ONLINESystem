@@ -273,9 +273,16 @@ function showSlide(index) {
         if (slideContent[index].showAllButtons) {
             btnSecondary.style.display = 'inline-block';
             btnTertiary.style.display = 'inline-flex';
+            btnPrimary.style.display = 'inline-block';
         } else {
             btnSecondary.style.display = 'none';
             btnTertiary.style.display = 'none';
+            // Hide primary button on banner 4 (index 3)
+            if (index === 3) {
+                btnPrimary.style.display = 'none';
+            } else {
+                btnPrimary.style.display = 'inline-block';
+            }
         }
     }
 
