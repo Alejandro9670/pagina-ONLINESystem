@@ -213,7 +213,7 @@ const slideContent = [
     },
     {
         title: '',
-        description: '<i class="fas fa-building"></i> ONLINE System Implementas Software Inmobiliario',
+        description: '',
         showAllButtons: false,
         showContent: true,
         buttonText: 'Contactar a ONLINE System por Software Inmobiliario'
