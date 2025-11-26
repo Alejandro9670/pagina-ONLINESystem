@@ -199,15 +199,18 @@ const totalSlides = slides.length;
 const slideContent = [
     {
         title: 'Soluciones Tecnológicas <span class="highlight">Integrales y Personalizadas</span>',
-        description: 'Más de 24 años transformando empresas a través de la tecnología con consultoría especializada, desarrollo de software, automatización, servicios de soporte y mantenimiento de infraestructura TI'
+        description: 'Más de 24 años transformando empresas a través de la tecnología con consultoría especializada, desarrollo de software, automatización, servicios de soporte y mantenimiento de infraestructura TI',
+        showAllButtons: true
     },
     {
-        title: 'Soluciones de <span class="highlight">Implementación, Integración y IA</span>',
-        description: ''
+        title: 'Seguridad en Redes OT <span class="highlight">Consultoría especializada para Asegurar Continuidad Operativa</span>',
+        description: '',
+        showAllButtons: false
     },
     {
         title: 'Soluciones Tecnológicas <span class="highlight">Integrales y Personalizadas</span>',
-        description: 'Más de 24 años transformando empresas a través de la tecnología con consultoría especializada, desarrollo de software, automatización, servicios de soporte y mantenimiento de infraestructura TI'
+        description: 'Más de 24 años transformando empresas a través de la tecnología con consultoría especializada, desarrollo de software, automatización, servicios de soporte y mantenimiento de infraestructura TI',
+        showAllButtons: true
     }
 ];
 
@@ -230,10 +233,21 @@ function showSlide(index) {
     // Update text content
     const heroTitle = document.getElementById('hero-title');
     const heroDescription = document.getElementById('hero-description');
+    const btnSecondary = document.querySelector('.btn-secondary');
+    const btnTertiary = document.querySelector('.btn-tertiary');
 
     if (heroTitle && slideContent[index]) {
         heroTitle.innerHTML = slideContent[index].title;
         heroDescription.textContent = slideContent[index].description;
+
+        // Show/hide buttons based on slide content
+        if (slideContent[index].showAllButtons) {
+            btnSecondary.style.display = 'inline-block';
+            btnTertiary.style.display = 'inline-flex';
+        } else {
+            btnSecondary.style.display = 'none';
+            btnTertiary.style.display = 'none';
+        }
     }
 }
 
