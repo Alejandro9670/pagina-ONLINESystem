@@ -201,19 +201,22 @@ const slideContent = [
         title: 'Soluciones Tecnológicas <span class="highlight">Integrales y Personalizadas</span>',
         description: 'Más de 24 años transformando empresas a través de la tecnología con consultoría especializada, desarrollo de software, automatización, servicios de soporte y mantenimiento de infraestructura TI',
         showAllButtons: true,
-        showContent: true
+        showContent: true,
+        buttonText: 'Contáctanos'
     },
     {
         title: 'Seguridad en Redes OT <span class="highlight">Consultoría especializada para Asegurar Continuidad Operativa</span>',
         description: '',
         showAllButtons: false,
-        showContent: true
+        showContent: true,
+        buttonText: 'Contáctanos'
     },
     {
         title: '',
         description: '<i class="fas fa-building"></i> ONLINE System Implementas Software Inmobiliario',
         showAllButtons: false,
-        showContent: true
+        showContent: true,
+        buttonText: 'Contactar a ONLINE System por Software Inmobiliario'
     }
 ];
 
@@ -243,7 +246,12 @@ function showSlide(index) {
 
     if (heroTitle && slideContent[index]) {
         heroTitle.innerHTML = slideContent[index].title;
-        heroDescription.textContent = slideContent[index].description;
+        heroDescription.innerHTML = slideContent[index].description;
+
+        // Update button text
+        if (btnPrimary && slideContent[index].buttonText) {
+            btnPrimary.textContent = slideContent[index].buttonText;
+        }
 
         // Show/hide entire content section based on slide
         if (slideContent[index].showContent) {
