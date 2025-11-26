@@ -15,8 +15,27 @@
             display: flex;
             align-items: center;
             position: relative;
-            background: linear-gradient(135deg, #1a365d 0%, #2c5282 100%);
+            background: url('images/mantenimiento.jpeg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
             padding: 120px 0 60px;
+        }
+
+        .service-detail-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(26, 54, 93, 0.7);
+            z-index: 1;
+        }
+
+        .service-detail-hero .container {
+            position: relative;
+            z-index: 2;
         }
 
         .service-detail-content {
