@@ -372,3 +372,36 @@ if (videoIframe) {
         console.error('Error loading video iframe');
     });
 }
+
+// Video Modal Functions
+function openVideoModal() {
+    const modal = document.getElementById('videoModal');
+    const iframe = document.getElementById('videoIframe');
+
+    // Set the YouTube embed URL with autoplay
+    iframe.src = 'https://www.youtube.com/embed/BdWjoRQitwY?autoplay=1';
+
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+}
+
+function closeVideoModal() {
+    const modal = document.getElementById('videoModal');
+    const iframe = document.getElementById('videoIframe');
+
+    // Stop video by clearing the src
+    iframe.src = '';
+
+    modal.classList.remove('active');
+    document.body.style.overflow = 'auto';
+}
+
+// Close modal with Escape key
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+        const modal = document.getElementById('videoModal');
+        if (modal.classList.contains('active')) {
+            closeVideoModal();
+        }
+    }
+});
