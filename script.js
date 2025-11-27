@@ -379,7 +379,7 @@ function openVideoModal() {
     const iframe = document.getElementById('videoIframe');
 
     // Set the YouTube embed URL with autoplay
-    iframe.src = 'https://www.youtube.com/embed/BdWjoRQitwY?autoplay=1';
+    iframe.src = 'https://www.youtube.com/embed/BdWjoRQitwY?si=E8oY1zFeDjdiR3AV&autoplay=1';
 
     modal.classList.add('active');
     document.body.style.overflow = 'hidden';
