@@ -376,6 +376,11 @@ if (videoIframe) {
 // Video Modal Functions
 function openVideoModal() {
     const modal = document.getElementById('videoModal');
+    const iframe = document.getElementById('videoIframe');
+
+    // Load the YouTube embed URL when opening the modal
+    iframe.src = 'https://www.youtube.com/embed/BdWjoRQitwY?si=E8oY1zFeDjdiR3AV&autoplay=1';
+
     modal.classList.add('active');
     document.body.style.overflow = 'hidden';
 }
@@ -384,10 +389,8 @@ function closeVideoModal() {
     const modal = document.getElementById('videoModal');
     const iframe = document.getElementById('videoIframe');
 
-    // Stop video by reloading the iframe
-    const currentSrc = iframe.src;
+    // Stop video by clearing the src
     iframe.src = '';
-    iframe.src = currentSrc;
 
     modal.classList.remove('active');
     document.body.style.overflow = 'auto';
