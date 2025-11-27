@@ -1647,19 +1647,13 @@ a[href^="mailto:"]:hover {
         align-items: center;
         gap: 1rem;
     }
-    
+
     .btn-primary, .btn-secondary {
-        width: 100%;
-        max-width: 280px;
+        width: auto;
+        min-width: 200px;
         text-align: center;
         padding: 15px 20px;
         font-size: 1rem;
-    }
-
-    .btn-tertiary {
-        width: 100%;
-        max-width: 320px;
-        justify-content: center;
     }
     
     .hero-visual {
